@@ -1,6 +1,31 @@
 {% extends '../shared/base.html' %}
-
+{% load static %}
 {% block content %}
 <!-- content goes here -->
-<h2>Home Title</h2>
+<section class="portfolio">
+    <div class="portifolio-upper">
+        <h2 class="portfolio-title">Portfolio</h2>
+        <p class="portfolio-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quisquam doloremque earum 
+            illum consequuntur modi quae eaque soluta ducimus consectetur tenetur vero veritatis, 
+            ut quod, sunt fuga animi! Quasi, officia.</p>
+        <button class="portfolio-hire__button">Hire Me</button>
+    </div>
+    <hr>
+    <div class="portfolio-categories">
+        <ol class="categories-list">
+            <li class="categories-items">
+                <a href="#" class="categories-items-anchor">Machine Learning</a>
+            </li>
+            <li class="categories-items">
+                <a href="#" class="categories-items-anchor">Django</a>
+            </li>
+            <li class="categories-items">
+                <a href="#" class="categories-items-anchor">Pure Python</a>
+            </li>
+            <li class="categories-items">
+                <a href="#" class="categories-items-anchor">VBA</a>
+            </li>
+        </ol>
+    </div>
+</section>
 {% endblock content %}
