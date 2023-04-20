@@ -1,0 +1,8 @@
+@import '../style/variables';
+
+navbar-container {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background: var($primary);
+}
