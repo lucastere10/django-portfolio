@@ -4,14 +4,18 @@ from .models import Tag,Post
 # Create your views here.
 
 def home(request):
+
     return render(request, 'portfolio_app/home.html')
 
 def projects(request):
-    post = Post.objects.all()
-    return render(request, 'portfolio_app/projects.html')
+    posts = Post.objects.filter(active = True)
+    context = {'posts':posts}
+    return render(request, 'portfolio_app/projects.html',context)
 
-def post(request):
-    return render(request, 'portfolio_app/post.html')
+def post(request, pk):
+    post = Post.objects.get(id = pk)
+    context= {'post':post}
+    return render(request, 'portfolio_app/post.html', context)
 
 def profile(request):
     return render(request, 'portfolio_app/profile.html')
