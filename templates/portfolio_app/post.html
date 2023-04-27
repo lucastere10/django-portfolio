@@ -2,10 +2,11 @@
 {% load static %}
 {% block content %}
 <!-- content goes here -->
-<h2>Post Title</h2>
-<section class="post-section">
+
+<section class="post-section body-section">
+    <h2>Post Title</h2>
     <div class="post-container">
-        <h2 class="post-title">{{post.headline}}</h2>
+        <h2 class="post-title main-title">{{post.headline}}</h2>
         <h4 class="post-subtitle">{{post.sub_headline}}</h4>
         <p class="post-desc">{{post.body|linebreaks}}</p>
         <hr>

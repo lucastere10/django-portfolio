@@ -1,0 +1,54 @@
+@import '../abstract/variables';
+
+.navbar-container {
+    position:relative;
+    top:0; bottom:0; left:0;
+    width:280px;
+    height: 106vh;
+    background: $dark-blue;
+    float:left;
+    box-sizing: border-box;
+    margin: 0 1rem 0 0;
+
+    /* font */
+    font-family: $font-OpenSans;
+    font-size: $font-size;
+    color: $font-color-white;
+
+    .navbar-name{
+        text-align: center;
+        padding: 1.5rem 1rem 1rem 1rem;
+        font-size: 2rem;
+    }
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    .navbar-img{
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: scale-down;
+    } 
+
+    *{
+        padding: .2rem;
+        text-align: center;
+    }
+}
+
+.navbar-socials__list{
+    display: flex;
+    flex-direction: row;
+
+    .navbar-socials__items{
+        margin: .5rem;
+    }
+}
+
+

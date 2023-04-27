@@ -1,45 +1,49 @@
 {% load static %}
-<div class="navbar-container">
-    <nav class="navbar">
+<header>  
+    <section class="navbar-container">
         <h2 class="navbar-name">Lucas Caldas</h2>
-        <img src='{% static "../../static/media/UserProfile.png" %}' alt="Profile Image" class="navbar-img">
-        <p class="navbar-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed, consequatur voluptatem 
-            laudantium facilis similique voluptas odit nisi nostrum voluptate ad illo qui aspernatur 
-            culpa deserunt quis possimus nesciunt dolorum.</p>
-        <hr>
-        <div class="navbar-socials">
-            <div class="socials-list">
-                <li class="socials-items">
-                    <a href="#" class="socials-anchors">LinkedIn</a>
-                </li>
-                <li class="socials-items">
-                    <a href="#" class="socials-anchors">Github</a>
-                </li>
-                <li class="socials-items">
-                    <a href="#" class="socials-anchors">Instagram</a>
-                </li>
-                <li class="socials-items">
-                    <a href="#" class="socials-anchors">Email</a>
-                </li>                
+        <nav class="navbar">
+            <a href="#" class="navbar-img__anchor"><img src='{% static "media/UserProfile.png" %}' alt="Profile Image" class="navbar-img"></a>
+            <p class="navbar-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed, consequatur voluptatem 
+                laudantium facilis similique voluptas odit nisi nostrum voluptate ad illo qui aspernatur 
+                culpa deserunt quis possimus nesciunt dolorum.</p>
+            <hr>
+            <div class="navbar-socials">
+                <ol class="navbar-socials__list">
+                    <li class="navbar-socials__items">
+                        <a href="#" class="socials-anchors"><i class="bi bi-instagram fa-10x"></i></a>
+                    </li>
+                    <li class="navbar-socials__items">
+                        <a href="#" class="socials-anchors"><i class="bi bi-github fa-fw"></i></a>
+                    </li>
+                    <li class="navbar-socials__items">
+                        <a href="#" class="socials-anchors"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                    <li class="navbar-socials__items">
+                        <a href="#" class="socials-anchors"><i class="bi bi-envelope"></i></a>
+                    </li>                
+                </ol>
             </div>
-        </div>
-        <hr>
-        <ol class="navbar-list">
-            <li class="navbar-items">
-                <a href="#" class="menu-anchors">Profile</a>
-            </li>        
-            <li class="navbar-items">
-                <a href="#" class="menu-anchors">Portfolio</a>
-            </li>
-            <li class="navbar-items">
-                <a href="#" class="menu-anchors">Posts</a>
-            </li>
-            <li class="navbar-items">
-                <a href="#" class="menu-anchors">Resume</a>
-            </li>
-            <li class="navbar-items">
-                <a href="#" class="menu-anchors">Contact</a>
-            </li>        
-        </ol>
-    </nav>
-</div>
+            <hr>
+            <div class="navbar-menu">
+                <ol class="navbar-menu__list">
+                    <li class="navbar-menu__items">
+                        <a href="#" class="menu-anchors">Profile</a>
+                    </li>        
+                    <li class="navbar-menu__items">
+                        <a href="#" class="menu-anchors">Portfolio</a>
+                    </li>
+                    <li class="navbar-menu__items">
+                        <a href="#" class="menu-anchors">Posts</a>
+                    </li>
+                    <li class="navbar-menu__items">
+                        <a href="#" class="menu-anchors">Resume</a>
+                    </li>
+                    <li class="navbar-menu__items">
+                        <a href="#" class="menu-anchors">Contact</a>
+                    </li>        
+                </ol>
+            </div>
+        </nav>
+    </section>
+</header>

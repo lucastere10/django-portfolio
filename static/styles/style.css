@@ -1,6 +1,12 @@
-navbar-container {
+@import './abstract/_reset.css';
+.navbar-container {
   display: flex;
   flex-direction: column;
   width: 280px;
   background: var(#2d3142);
+}
+
+.navbar-socials {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */

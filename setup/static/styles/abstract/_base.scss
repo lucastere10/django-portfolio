@@ -1,0 +1,34 @@
+@import './variables';
+
+.body-section {
+    margin-left: 296px;
+    /* font */
+    font-family: $font-OpenSans;
+    font-size: $font-size;
+    color: $font-color-black;
+
+    .main-title{
+        text-align: center;
+        padding: 1.5rem 1rem 1rem 1rem;
+        font-size: 3rem;
+    }
+}
+
+/* PROJECTS */
+
+.post-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 2rem; 
+}
+
+/* FOOTER */
+
+.footer-contaier{
+    margin: 64px 0 32px 0;
+
+    .footer-text{
+        text-align: center;
+    }
+}

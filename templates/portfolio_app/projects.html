@@ -1,26 +1,13 @@
 {% extends '../shared/base.html' %}
-
+{% load static %}
 {% block content %}
 <!-- content goes here -->
-<div class="projects-contaier">
-    <h1>Projects Title</h1>
-    <div class="post-wrapper">
-        {% for post in posts %}
-        <div>
-            <div class="post">
-                <img src="" alt="thumb" class="thumbnail">
-                <div class="post-preview">
-                    <h6 class="post-headline">{{post.headline}}</h6>
-                    <p class="post-subheadline">{{post.sub_headline}}</p>
-                    <a href="#" class="read-more__button">Read More</a>
-                    <hr>
-                    {% for tag in post.tags.all %}
-                        <span class="post-tags">{{tag}}</span>
-                    {% endfor %}
-                </div>
-            </div>
+<section class="post-section body-section">
+    <div class="projects-contaier">
+        <h1 class="projects-title main-title">Projects Title</h1>
+        <div class="post-wrapper">
+            {% include '../partials/_cards.html' %}
         </div>
-        {% endfor %}
     </div>
-</div>
+</section>
 {% endblock content %}

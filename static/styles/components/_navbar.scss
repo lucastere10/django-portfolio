@@ -1,8 +1,13 @@
-@import '../style/variables';
+@import '../abstract/variables_main';
 
-navbar-container {
+.navbar-container {
     display: flex;
     flex-direction: column;
     width: 280px;
     background: var($primary);
+}
+
+.navbar-socials {
+    display: flex;
+    flex-direction: row;
 }

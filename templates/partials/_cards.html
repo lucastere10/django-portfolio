@@ -1,0 +1,17 @@
+{% load static %}
+{% for post in posts %}
+<div>
+    <div class="post">
+        <img src="{{post.thumbnail.url}}" alt="thumb" class="thumbnail">
+        <div class="post-preview">
+            <h6 class="post-headline">{{post.headline}}</h6>
+            <p class="post-subheadline">{{post.sub_headline}}</p>
+            <a href="#" class="read-more__button">Read More</a>
+            <hr>
+            {% for tag in post.tags.all %}
+                <span class="post-tags">{{tag}}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
