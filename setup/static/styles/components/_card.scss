@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     max-width: 450px;
-    margin-top: 20vh;
+    margin-top: 3vh;
     background-color: $fresh-grey;
     font-family: $font-OpenSans;
     border: 1px solid $dark-blue;
@@ -20,8 +20,7 @@
         font-weight: 600;
         margin-top: 16px;
     }
-    .post-subheadline {
-        font-size: 14px;
+    .post-subheadline { 
         color: $dark-blue;
         line-height: 150%;
     }

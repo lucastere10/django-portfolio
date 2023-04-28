@@ -1,7 +1,7 @@
 {% load static %}
 <header>  
     <section class="navbar-container">
-        <h2 class="navbar-name">Lucas Caldas</h2>
+        <a href="{% url 'home' %}" class=""><h2 class="navbar-name">Lucas Caldas</h2></a>
         <nav class="navbar">
             <a href="#" class="navbar-img__anchor"><img src='{% static "media/UserProfile.png" %}' alt="Profile Image" class="navbar-img"></a>
             <p class="navbar-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed, consequatur voluptatem 
@@ -28,10 +28,10 @@
             <div class="navbar-menu">
                 <ol class="navbar-menu__list">
                     <li class="navbar-menu__items">
-                        <a href="#" class="menu-anchors">Profile</a>
+                        <a href="{% url 'profile' %}" class="menu-anchors">Profile</a>
                     </li>        
                     <li class="navbar-menu__items">
-                        <a href="#" class="menu-anchors">Portfolio</a>
+                        <a href="{% url 'projects' %}" class="menu-anchors">Portfolio</a>
                     </li>
                     <li class="navbar-menu__items">
                         <a href="#" class="menu-anchors">Posts</a>
@@ -43,6 +43,10 @@
                         <a href="#" class="menu-anchors">Contact</a>
                     </li>        
                 </ol>
+                <hr>
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'create_post' %}" class="navbar-createPost__button">Create Post</a>
+                {% endif %}
             </div>
         </nav>
     </section>

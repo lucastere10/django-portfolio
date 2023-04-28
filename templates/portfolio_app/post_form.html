@@ -1,0 +1,13 @@
+{% extends '../shared/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="post-form__container">
+    <h3 class="post-form__title">Title</h3>
+    <form action="" class="post-form__form" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class = "btn btn-primary" type="submit" value="Submit Post">
+    </form>
+</div>
+{% endblock content %}
