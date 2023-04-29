@@ -14,6 +14,14 @@
   font-size: 3rem;
 }
 
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 /* PROJECTS */
 .post-wrapper {
   display: flex;
@@ -102,7 +110,6 @@
   margin-top: 16px;
 }
 .post .post-subheadline {
-  font-size: 14px;
   color: #213159;
   line-height: 150%;
 }
