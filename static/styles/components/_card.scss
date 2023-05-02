@@ -1,0 +1,43 @@
+@import '../abstract/variables';
+
+.post {
+    display: flex;
+    flex-direction: row;
+    max-width: 450px;
+    margin-top: 3vh;
+    background-color: $fresh-grey;
+    font-family: $font-OpenSans;
+    border: 1px solid $dark-blue;
+    padding: 8px;
+    border-radius: 12px;
+    .thumbnail{
+        width: 160px;
+        height: 160px;
+        padding: .5rem;
+    }
+    .post-headline {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: 16px;
+    }
+    .post-subheadline { 
+        color: $dark-blue;
+        line-height: 150%;
+    }
+
+    .post-tags {
+        padding: 4px 6px;
+        border-radius: 6px;
+        font-size: 14px;
+        color: $dark-blue;
+        line-height: 150%;
+        background-color: $font-color-white;
+    }
+}
+
+.post-preview{
+    .card__details {
+        /* Add space around the details */
+        padding: 16px 8px 8px 8px;
+      }
+}

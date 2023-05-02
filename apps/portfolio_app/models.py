@@ -1,4 +1,6 @@
 from django.db import models
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Tag(models.Model):
@@ -11,7 +13,7 @@ class Post(models.Model):
     headline = models.CharField(max_length=100,null=False,blank=False)
     sub_headline = models.CharField(max_length=200,null=False,blank=False)
     thumbnail = models.ImageField(null=True,blank=True,upload_to='media',default='placeholder.png')
-    body = models.TextField(null=True,blank=True)
+    body = RichTextUploadingField(null=True,blank=True)
     date = models.DateTimeField(auto_now_add=True)
     active  = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)
