@@ -1,0 +1,34 @@
+{% extends '../shared/base.html' %}
+{% load static %}
+{% block content %}
+<!-- content goes here -->
+<section class="contact-section body-section">
+    <div class="contact-upper upper">
+        <h2 class="contact-title main-title">Contact</h2>
+        <p>Interested in hiring me for your project or just want to say hi? 
+        You can fill in the contact form below or send me an email to lucasmedeiroscaldas@yahoo.com.br</p>
+        <p>Want to get connected? Follow me on the social channels below.</p>
+    </div>
+    <hr>
+    <div class="contact-body">
+        <form id="contact-form" method="POST" action="{% url 'send_email' %}">
+            {% csrf_token %}
+            <a name="contact"></a>
+
+            <label>Name</label>
+            <input type="text" class="input-field" name="name">
+
+            <label>Subject</label>
+            <input type="text" class="input-field" name="subject">
+
+            <label>Email</label>
+            <input type="text" class="input-field" name="email">
+
+            <label>Message</label>
+            <textarea name="message" class="input-field"></textarea>
+
+            <input id="submit-btn" type="submit" value="Send">
+        </form>
+    </div>
+</section>
+{% endblock content %}

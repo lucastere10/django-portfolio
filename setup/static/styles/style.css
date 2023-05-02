@@ -14,14 +14,6 @@
   font-size: 3rem;
 }
 
-a:link {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
 /* PROJECTS */
 .post-wrapper {
   display: flex;
@@ -79,6 +71,12 @@ a:hover {
   padding: 0.2rem;
   text-align: center;
 }
+.navbar hr {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 0;
+}
 
 .navbar-socials__list {
   display: flex;
@@ -86,6 +84,23 @@ a:hover {
 }
 .navbar-socials__list .navbar-socials__items {
   margin: 0.5rem;
+}
+.navbar-socials__list .navbar-socials__items .socials-anchors:hover, .navbar-socials__list .navbar-socials__items .socials-anchors:link, .navbar-socials__list .navbar-socials__items .socials-anchors:visited, .navbar-socials__list .navbar-socials__items .socials-anchors:active, .navbar-socials__list .navbar-socials__items .socials-anchors:link {
+  font-size: 1.5rem;
+  color: #EAEAEA;
+  text-decoration: none;
+}
+
+.navbar-menu__items {
+  display: flex;
+  margin-top: 16px;
+  align-items: flex-start;
+}
+
+.menu-anchors:hover, .menu-anchors:link, .menu-anchors:visited, .menu-anchors:active, .menu-anchors:link {
+  font-size: 1.5rem;
+  color: #EAEAEA;
+  text-decoration: none;
 }
 
 .post {

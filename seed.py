@@ -5,7 +5,11 @@ django.setup()
 
 from faker import Faker
 from apps.portfolio_app.models import Post, Tag
+from django.conf import settings
 import random, datetime
+
+#print(settings.EMAIL_HOST_USER)
+#print(settings.EMAIL_PASSWORD)
 
 def create_posts(posts_number):
     fake = Faker('en')

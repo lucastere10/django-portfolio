@@ -40,6 +40,13 @@
         padding: .2rem;
         text-align: center;
     }
+    
+    hr {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 .navbar-socials__list{
@@ -48,7 +55,34 @@
 
     .navbar-socials__items{
         margin: .5rem;
+        .socials-anchors{
+            &:hover,
+            &:link,
+            &:visited,
+            &:active,
+            &:link  {
+                font-size: 1.5rem;
+                color: $light-grey;
+                text-decoration: none;
+            }
+        }
     }
 }
 
+.navbar-menu__items{
+    display: flex;
+    margin-top: 16px;
+    align-items: flex-start;
+}
 
+.menu-anchors{
+    &:hover,
+    &:link,
+    &:visited,
+    &:active,
+    &:link  {
+        font-size: 1.5rem;
+        color: $light-grey;
+        text-decoration: none;
+    }
+}

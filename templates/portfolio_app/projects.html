@@ -4,7 +4,10 @@
 <!-- content goes here -->
 <section class="post-section body-section">
     <div class="projects-contaier">
-        <h1 class="projects-title main-title">Projects Title</h1>
+        <h1 class="projects-title main-title">Projects</h1>
+        <p>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+            I'm taking on freelance work at the moment. Want some help building your software?</p>
+        <hr>
         <div class="projects-filters">
             <form action="" class="projects-filters__form" method="GET">
                 {{myFilter.form}}
@@ -16,10 +19,9 @@
         </div>
 
         <div class="projects-paginator">
-            {% if posts.has_other_pages %}
+            {% if projects.has_other_pages %}
                 <ul class="projects-pagination">
-
-                    {% if posts.has_previus %}
+                    {% if projects.has_previus %}
                         <li class="projects-pagination__item">
                             <a class="projects-pagination__anchor" href="?page={{previus_page_number}}">&laquo;</a>
                         </li>
@@ -28,8 +30,8 @@
                         </li>
                     {% endif %}
 
-                    {% for i in posts.paginator.page_range %}
-                        {% if posts.number == i %}
+                    {% for i in projects.paginator.page_range %}
+                        {% if projects.number == i %}
                             <li class="projects-pagination__item">
                                 <a class="projects-pagination__anchor">{{i}}</a>
                             </li>
@@ -42,13 +44,12 @@
 
                     {% if post.has_next%}
                         <li class="projects-pagination__item">
-                            <a href="?page={{posts.paginator.num_pages}}" class="projects-pagination__anchor">Last</a>
+                            <a href="?page={{projects.paginator.num_pages}}" class="projects-pagination__anchor">Last</a>
                         </li>
                         <li class="projects-pagination__item">
-                            <a href="?page={{posts.next_page_number}}" class="projects-pagination__anchor">&raquo;</a>
+                            <a href="?page={{projects.next_page_number}}" class="projects-pagination__anchor">&raquo;</a>
                         </li>
                     {% endif %}
-                    
                 </ul>
             {% endif %}
         </div>

@@ -1,7 +1,7 @@
 {% load static %}
 <header>  
     <section class="navbar-container">
-        <a href="{% url 'home' %}" class=""><h2 class="navbar-name">Lucas Caldas</h2></a>
+        <a href="{% url 'home' %}" class="menu-anchors"><h2 class="navbar-name">Lucas Caldas</h2></a>
         <nav class="navbar">
             <a href="#" class="navbar-img__anchor"><img src='{% static "media/UserProfile.png" %}' alt="Profile Image" class="navbar-img"></a>
             <p class="navbar-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed, consequatur voluptatem 
@@ -28,24 +28,29 @@
             <div class="navbar-menu">
                 <ol class="navbar-menu__list">
                     <li class="navbar-menu__items">
-                        <a href="{% url 'profile' %}" class="menu-anchors">Profile</a>
+                        <a href="{% url 'home' %}" class="menu-anchors">
+                            <i class="bi bi-person-circle"></i>
+                             Profile</a>
                     </li>        
                     <li class="navbar-menu__items">
-                        <a href="{% url 'projects' %}" class="menu-anchors">Portfolio</a>
+                        <a href="{% url 'projects' %}" class="menu-anchors">
+                            <i class="bi bi-book"></i>
+                             Portfolio</a>
                     </li>
                     <li class="navbar-menu__items">
-                        <a href="#" class="menu-anchors">Posts</a>
+                        <a href="{% url 'resume' %}" class="menu-anchors">
+                            <i class="bi bi-filetype-pdf"></i>
+                             Resume</a>
                     </li>
                     <li class="navbar-menu__items">
-                        <a href="#" class="menu-anchors">Resume</a>
-                    </li>
-                    <li class="navbar-menu__items">
-                        <a href="#" class="menu-anchors">Contact</a>
+                        <a href="{% url 'contact' %}" class="menu-anchors">
+                            <i class="bi bi-send-plus"></i>
+                             Contact</a>
                     </li>        
                 </ol>
                 <hr>
                 {% if request.user.is_authenticated %}
-                    <a href="{% url 'create_post' %}" class="navbar-createPost__button">Create Post</a>
+                    <a href="{% url 'create_post' %}" class="menu-anchors">Create Post</a>
                 {% endif %}
             </div>
         </nav>
