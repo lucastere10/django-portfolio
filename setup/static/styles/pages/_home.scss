@@ -1,0 +1,40 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 2fr auto;
+    width: clamp(720px ,100% ,1200px);
+    grid-template-rows: 3rem 1.5rem Auto;
+    grid-gap: .5rem 1rem;
+    grid-template-areas:
+      "title img"
+      "subheader img"
+      "desc img"
+      "btn img";
+    .home-img{
+        width: 300px;
+        height: auto;
+        grid-area: img;
+    }
+    .profile-name{
+        grid-area: title;
+        place-self: center start ;
+        padding: 0;
+        font-size: 3rem;
+    }
+    .profile-name-subheader{
+        grid-area: subheader;
+        font-size: 1.5rem;
+        place-self: center start ;
+        margin: 0;
+    }
+    .profile-desc{
+        grid-area: desc;
+        place-self: center stretch;
+        text-align: justify;
+        margin: 0;
+        max-width: 90%;
+    }
+    .buttons-container{
+        grid-area: btn;
+        place-self: start start;
+    }
+}

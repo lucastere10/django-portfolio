@@ -3,21 +3,21 @@
 {% block content %}
 <!-- content goes here -->
 <section class="post-section body-section">
-    <div class="projects-contaier">
+    <div class="upper-container">
         <h1 class="projects-title main-title">Projects</h1>
-        <p>Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+        <p class="subtitle">Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
             I'm taking on freelance work at the moment. Want some help building your software?</p>
-        <hr>
+    </div>
+    <div class="lower-container">
         <div class="projects-filters">
             <form action="" class="projects-filters__form" method="GET">
                 {{myFilter.form}}
-                <input class="projects-filters__button" type="submit" value="search">
+                <input class="projects-filters__button btn" type="submit" value="search">
             </form>
         </div>
         <div class="post-wrapper">
             {% include '../partials/_cards.html' %}
         </div>
-
         <div class="projects-paginator">
             {% if projects.has_other_pages %}
                 <ul class="projects-pagination">
@@ -53,7 +53,6 @@
                 </ul>
             {% endif %}
         </div>
-
     </div>
 </section>
 {% endblock content %}

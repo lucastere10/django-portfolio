@@ -4,10 +4,13 @@
 <!-- content goes here -->
 
 <section class="post-section body-section">
-    <div class="post-container">
+    <div class="upper-container">
         <h2 class="post-title main-title">{{post.headline}}</h2>
-        <h4 class="post-subtitle">{{post.sub_headline}}</h4>
-        <p class="post-desc">{{post.body|safe}}</p>
+        <h4 class="post-subtitle subtitle">{{post.sub_headline}}</h4>
+        <hr>
+    </div>
+    <div class="post-container lower-container">
+        <p class="post-body">{{post.body|safe}}</p>
         <hr>
         <p class="post-date">{{post.date}}</p>
     </div>

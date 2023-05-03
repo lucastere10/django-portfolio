@@ -2,7 +2,7 @@
 $dark-gold: #8E793E;
 $light-gold: #AD974F;
 $intellectual-grey: #231F20;
-$light-grey: #EAEAEA;
+$light-grey: #fafafa;
 
 //Colors Trust
 $dark-blue: #213159;
@@ -20,4 +20,8 @@ $homey-taupe: #ece8d3;
 $font-color-black: black;
 $font-color-white: white;
 $font-size: 400;
-$font-OpenSans: 'Open Sans', sans-serif;
+$font-type: 'Roboto', sans-serif;
+
+:root{
+    font-family: 'Roboto', sans-serif;;
+}

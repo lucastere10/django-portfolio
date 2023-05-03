@@ -1,34 +1,96 @@
 @import './variables';
 
+.body{
+    font-family: $font-type;
+    font-size: $font-size;
+}
+
 .body-section {
-    margin-left: 296px;
+    margin-left: 280px;
     /* font */
-    font-family: $font-OpenSans;
+    font-family: $font-type;
     font-size: $font-size;
     color: $font-color-black;
+}
 
+/* UPPER CONTAINER */
+
+.upper-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $light-grey;
+    padding: 48px;
+    gap: 16px;
     .main-title{
         text-align: center;
-        padding: 1.5rem 1rem 1rem 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .subtitle{
+        font-size: 1rem;
+        text-align: center;
+        max-width: 60%;
     }
 }
 
-/* PROJECTS */
+/* LOWER CONTAINER */
 
-.post-wrapper{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 2rem; 
+.lower-container{
+    padding: 48px;
+    .main-title{
+        text-align: center;
+        padding: 1.5rem 1rem 1rem 1rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .subtitle{
+        font-size: 1rem;
+        text-align: center;
+        margin: 2rem;
+        max-width: 65%;
+    }
 }
 
 /* FOOTER */
 
 .footer-contaier{
-    margin: 64px 0 32px 0;
-
+    position: relative;
+    margin-top: 400px;
     .footer-text{
         text-align: center;
     }
+
 }
+
+/**/
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.375rem 1rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #fff;
+    background-color: $sky-blue;
+    border-color: $sky-blue;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    min-width: 150px;
+}
+
+input[type=text] {
+    width: auto;
+    height: 22px;
+    padding: .25rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+  }

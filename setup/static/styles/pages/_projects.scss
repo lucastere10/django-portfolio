@@ -1,0 +1,23 @@
+@import '../abstract/variables';
+
+.projects-filters__form{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    padding: 1rem;
+    margin-left: 90px;
+}
+
+.projects-pagination{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    margin-left: 2rem;
+}
+
+.post-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 2rem; 
+}

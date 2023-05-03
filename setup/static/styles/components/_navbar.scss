@@ -8,10 +8,10 @@
     background: $dark-blue;
     float:left;
     box-sizing: border-box;
-    margin: 0 1rem 0 0;
+    margin: 0;
 
     /* font */
-    font-family: $font-OpenSans;
+    font-family: $font-type;
     font-size: $font-size;
     color: $font-color-white;
 
@@ -28,7 +28,7 @@
     align-items: center;
     justify-content: center;
     padding: 16px;
-
+    gap: .5rem;
     .navbar-img{
         width: 160px;
         height: 160px;
@@ -40,7 +40,6 @@
         padding: .2rem;
         text-align: center;
     }
-    
     hr {
         margin-left: 0;
         margin-right: 0;
@@ -71,7 +70,7 @@
 
 .navbar-menu__items{
     display: flex;
-    margin-top: 16px;
+    margin: 8px 0;
     align-items: flex-start;
 }
 
