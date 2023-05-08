@@ -1,0 +1,39 @@
+/* BUTTONS */
+
+.btn{
+font-family: Roboto, sans-serif;
+font-weight: 700;
+font-size: 1rem;
+color: #fff;
+background-color: $tertiary;
+padding: 10px 20px;
+border: solid $tertiary 2px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 8px;
+transition : 719ms;
+transform: translateY(0);
+display: flex; 
+justify-content: center;
+align-items: center;
+white-space: nowrap;
+cursor: pointer;
+gap: .5rem;
+}
+
+.btn:hover{
+transition : 719ms;
+padding: 10px 30px;
+transform : translateY(-5px);
+background-color: #fff;
+color: $tertiary;
+border: solid 2px $tertiary;
+}
+
+/* TEXT INPUT */
+input[type=text] {
+    width: auto;
+    height: 22px;
+    padding: .25rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+  }

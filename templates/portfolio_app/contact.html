@@ -9,26 +9,27 @@
         You can fill in the contact form below or send me an email to lucasmedeiroscaldas@yahoo.com.br</p>
         <p class="subtitle">Want to get connected? Follow me on the social channels below.</p>
     </div>
-    <hr>
-    <div class="contact-body">
-        <form id="contact-form" method="POST" action="{% url 'send_email' %}">
-            {% csrf_token %}
-            <a name="contact"></a>
+    <div class="contact-body lower-container">
+        <div class="form-container">            
+            <form id="contact-form" method="POST" action="{% url 'send_email' %}">
+                {% csrf_token %}
+                <a name="contact"></a>
 
-            <label>Name</label>
-            <input type="text" class="input-field" name="name">
+                <label>Name</label>
+                <input type="text" class="input-field" name="name">
 
-            <label>Subject</label>
-            <input type="text" class="input-field" name="subject">
+                <label>Subject</label>
+                <input type="text" class="input-field" name="subject">
 
-            <label>Email</label>
-            <input type="text" class="input-field" name="email">
+                <label>Email</label>
+                <input type="text" class="input-field" name="email">
 
-            <label>Message</label>
-            <textarea name="message" class="input-field"></textarea>
+                <label>Message</label>
+                <textarea name="message" class="input-field"></textarea>
 
-            <input id="submit-btn" type="submit" value="Send">
-        </form>
+                <input id="submit-btn" type="submit" value="Send">
+            </form>
+        </div>
     </div>
 </section>
 {% endblock content %}

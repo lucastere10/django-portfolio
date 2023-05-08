@@ -1,8 +1,20 @@
 @import './variables';
 
-.body{
+:root{
     font-family: $font-type;
     font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    width: 100%;
+    min-height: 100vh;
 }
 
 .body-section {
@@ -35,9 +47,8 @@
 }
 
 /* LOWER CONTAINER */
-
 .lower-container{
-    padding: 48px;
+    padding: 16px 48px;
     .main-title{
         text-align: center;
         padding: 1.5rem 1rem 1rem 1rem;
@@ -62,35 +73,3 @@
     }
 
 }
-
-/**/
-.btn {
-    display: inline-block;
-    font-weight: bold;
-    padding: 0.375rem 1rem;
-    height: 2.5rem;
-    font-size: 1rem;
-    border: 1px solid transparent;
-    outline: none;
-    color: #fff;
-    background-color: $sky-blue;
-    border-color: $sky-blue;
-    line-height: 1.5;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    min-width: 150px;
-}
-
-input[type=text] {
-    width: auto;
-    height: 22px;
-    padding: .25rem;
-    font-size: 1.1rem;
-    border-radius: 4px;
-  }

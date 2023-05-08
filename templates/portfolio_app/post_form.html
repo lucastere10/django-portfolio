@@ -3,12 +3,16 @@
 
 {% block content %}
 <div class="post-form__container">
-    <h3 class="post-form__title">Create a new Post</h3>
-    <form action="" class="post-form__form" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <input class = "btn-primary btn" type="submit" value="Submit Post">
-    </form>
+    <div class="upper-container">
+        <h3 class="main-title">Create a new Post</h3>
+    </div>
+    <div class="lower-container">
+        <form action="" class="post-form__form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.media }}
+            {{ form.as_p }}
+            <input class = "btn-primary btn" type="submit" value="Submit Post">
+        </form>
+    </div>
 </div>
 {% endblock content %}
