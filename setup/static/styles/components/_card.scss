@@ -30,12 +30,12 @@
         font-weight: 700;
         grid-area: title;
         text-decoration: underline;
-        color: $secondary;
+        color: var(--clr-secondary);
     }
     .post-subheadline {
         padding: .5rem;
         grid-area: desc;
-        color: $primary;
+        color: var(--clr-primary);
     }
     .tags {
         grid-area: tags;
@@ -43,9 +43,9 @@
             padding: 4px 6px;
             border-radius: 6px;
             font-size: 14px;
-            color: $light-grey;
+            color: var(--clr-background);
             line-height: 150%;
-            background-color: $heavy-grey;
+            background-color: var(--heavy-grey);
         }
     }
     .anchors {
@@ -69,9 +69,12 @@
     .card-updatePost__button{
         background-color: darkgreen;
         border: solid darkgreen 2px;
+        width: auto;
+        padding: 10px 10px;
         span{display: none;}
         &:hover{
             color: darkgreen;
+            background-color: #fff;
             span{
                 display: block;
             }
@@ -80,9 +83,12 @@
     .card-deletePost__button{
         background-color: darkred;
         border: solid darkred 2px;
+        width: auto;
+        padding: 10px 10px;
         span{display: none;}
         &:hover{
             color: darkred;
+            background-color: #fff;
             span{
                 display: block;
             } 

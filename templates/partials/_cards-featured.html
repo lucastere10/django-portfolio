@@ -1,12 +1,12 @@
 {% load static %}    
 <div class="radio-inputs">
     {% for post in featured %}
-    <input type="radio" name="slider" id="slider {{post.id}}">
+    <input type="radio" name="slider" id="s{{forloop.counter}}" checked>
     {% endfor %}
 </div>
 <div class="cards">
     {% for post in featured %}
-    <label for="slider {{post.id}}" id="label {{post.id}}">
+    <label for="s{{forloop.counter}}" id="slide{{forloop.counter}}">
         <div class="card">
             <div class="image">
                 <img src="{{post.thumbnail.url}}" alt="">
@@ -22,9 +22,9 @@
             </div>
             <a href="{% url 'post' pk=post.pk %}" class="read-btn btn">Read More</a>
             <div class="socials">
-                <a href="" class="anchors"><i class="bi bi-file-earmark-plus"></i></a>
+                <a href="{% url 'update_post' post.id %}" class="anchors"><i class="bi bi-file-earmark-plus"></i></a>
                 <a href="" class="anchors"><i class="bi bi-share"></i></a>
-                <a href="" class="anchors"><i class="bi bi-trash"></i></a>
+                <a href="{% url 'delete_post' post.id %}" class="anchors"><i class="bi bi-trash"></i></a>
             </div>
         </div>
     </label>

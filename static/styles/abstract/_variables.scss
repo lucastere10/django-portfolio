@@ -1,5 +1,24 @@
+
+// Colors
+$primary: #EBF2FA;
+$secondary: #3B7EEB;
+$tertiary: #064789;
+$light-grey: #fafafa;
+$heavy-grey: #4f4f4f;
+
+// Opaques
+$light-grey-opaque: rgba(250, 250, 250, .7);
+$card-background: #323444;
+
+// Fonts
+$font-color-black: black;
+$font-color-white: #FAF9F6;
+$font-type: 'Urbanist', sans-serif;
+$font-weight: 400;
+$font-size: 16px;
+
 //COLOR SCHEMES
-:root:has(#color1:checked){
+/*:root:has(#color1:checked){
     $primary: #EBF2FA;
     $secondary: #3B7EEB;
     $tertiary: #064789;
@@ -28,21 +47,8 @@
     $heavy-grey: #4f4f4f;
 }
 
-/*$primary: #EBF2FA;
-$secondary: #3B7EEB;
-$tertiary: #064789;
-$light-grey: #fafafa;
-$heavy-grey: #4f4f4f;*/
-
-//opaques
-$light-grey-opaque: rgba(250, 250, 250, .7);
-$card-background: #323444;
-
-
-// Fonts
-$font-color-black: black;
-$font-color-white: #FAF9F6;
-$font-type: 'Urbanist', sans-serif;
-$font-weight: 400;
-$font-size: 16px;
-
+:root{
+    font-family: $font-type;
+    font-size: $font-size;
+    color-scheme: light dark;
+};*/
