@@ -1,5 +1,5 @@
 //COLOR SCHEMES
-/*:root:has(#color1:checked){
+:root:has(#color1:checked){
     $primary: #EBF2FA;
     $secondary: #3B7EEB;
     $tertiary: #064789;
@@ -26,18 +26,13 @@
     $tertiary: #2F184B;
     $light-grey: #F4EFFA;
     $heavy-grey: #4f4f4f;
-}*/
+}
 
-$primary: #EBF2FA;
+/*$primary: #EBF2FA;
 $secondary: #3B7EEB;
 $tertiary: #064789;
 $light-grey: #fafafa;
-$heavy-grey: #4f4f4f;
-
-:root:has(#color4:checked){
-    font-size: 20px;
-    $primary: red;
-}
+$heavy-grey: #4f4f4f;*/
 
 //opaques
 $light-grey-opaque: rgba(250, 250, 250, .7);
