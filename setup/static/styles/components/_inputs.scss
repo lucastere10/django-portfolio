@@ -1,8 +1,6 @@
-@import '../abstract/variables';
-
 /* BUTTONS */
 .btn{
-font-family: Roboto, sans-serif;
+font-family: $font-type;
 font-weight: 700;
 font-size: 1rem;
 color: #fff;
@@ -31,10 +29,16 @@ border: solid 2px $tertiary;
 }
 
 /* TEXT INPUT */
-input[type=text] {
-    width: auto;
-    height: 22px;
-    padding: .25rem;
-    font-size: 1.1rem;
-    border-radius: 4px;
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  &:hover, &:active{
+    box-shadow: 0px 0px 6px 0px $tertiary;
   }
+}

@@ -18,20 +18,32 @@
         </div>
     </div>
     <div class="lower-container">
-        <div class="profile-skills">
-            <h3 class="profile-subheader main-title">What do I do</h3>
+        <div class="profile-container">
+            <div class="profile-row">
+                <h3 class="main-title">What do I do</h3>
+                <a href="#" class="edit-anchor">Edit</a>
+            </div>
+            <p class="text-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, recusandae! 
+                Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
+                numquam aliquid eveniet. Similique quo at inventore provident dolor.</p>
         </div>
-        <hr>
-        <div class="profile-testimonials">
-            <h3 class="profile-subheader main-title">Testimonials</h3>
+        <div class="profile-container">
+            <div class="profile-row">
+                <h3 class="main-title">Featured Projects</h3>
+                <a href="#" class="edit-anchor">Edit</a>
+            </div>
+            <div class="cards-featured-container">
+                {% include '../partials/_cards-featured.html' %}
+            </div>
         </div>
-        <hr>
-        <div class="profile-featured__projects">
-            <h3 class="profile-subheader main-title">Featured Projects</h3>
-        </div>
-        <hr>
-        <div class="profile-latests__projects">
-            <h3 class="profile-subheader main-title">Projects</h3>
+        <div class="profile-container">
+            <div class="profile-row">
+                <h3 class="main-title">Contact</h3>
+                <a href="#" class="edit-anchor">Edit</a>
+            </div>
+            <div class="home-form-container">
+                {% include '../partials/_contact-form.html' %}
+            </div>
         </div>
     </div>
 </section>

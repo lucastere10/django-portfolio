@@ -1,0 +1,33 @@
+{% load static %}    
+<div class="radio-inputs">
+    {% for post in featured %}
+    <input type="radio" name="slider" id="slider {{post.id}}">
+    {% endfor %}
+</div>
+<div class="cards">
+    {% for post in featured %}
+    <label for="slider {{post.id}}" id="label {{post.id}}">
+        <div class="card">
+            <div class="image">
+                <img src="{{post.thumbnail.url}}" alt="">
+                <div class="dots">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="infos">
+                <span class="name">{{post.headline}}</span>
+                <span class="desc">{{post.sub_headline}}</span>
+            </div>
+            <a href="{% url 'post' pk=post.pk %}" class="read-btn btn">Read More</a>
+            <div class="socials">
+                <a href="" class="anchors"><i class="bi bi-file-earmark-plus"></i></a>
+                <a href="" class="anchors"><i class="bi bi-share"></i></a>
+                <a href="" class="anchors"><i class="bi bi-trash"></i></a>
+            </div>
+        </div>
+    </label>
+    {% endfor %}
+</div>
+

@@ -11,7 +11,10 @@ from .filters import PostFilter
 from .models import Tag,Post
 
 def home(request):
-    return render(request, 'portfolio_app/home.html')
+    featured = Post.objects.order_by("-date")[:5]
+    print(featured)
+    context = {'featured':featured}
+    return render(request, 'portfolio_app/home.html', context)
 
 def projects(request):
     projects = Post.objects.filter(active = True)

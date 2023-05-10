@@ -1,11 +1,53 @@
-//Colors
+//COLOR SCHEMES
+/*:root:has(#color1:checked){
+    $primary: #EBF2FA;
+    $secondary: #3B7EEB;
+    $tertiary: #064789;
+    $light-grey: #fafafa;
+    $heavy-grey: #4f4f4f;
+}
+:root:has(#color2:checked){
+    $primary: #E9ECEF;
+    $secondary: #495057;
+    $tertiary: #212529;
+    $light-grey: #F8F9FA;
+    $heavy-grey: #4f4f4f;
+}
+:root:has(#color3:checked){
+    $primary: #EDE0D4;
+    $secondary: #9C6644;
+    $tertiary: #7F5539;
+    $light-grey: #EDE0D4;
+    $heavy-grey: #4f4f4f;
+}
+:root:has(#color4:checked){
+    $primary: #F4EFFA;
+    $secondary: #532B88;
+    $tertiary: #2F184B;
+    $light-grey: #F4EFFA;
+    $heavy-grey: #4f4f4f;
+}*/
+
 $primary: #EBF2FA;
-$secondary: #427AA1;
+$secondary: #3B7EEB;
 $tertiary: #064789;
+$light-grey: #fafafa;
+$heavy-grey: #4f4f4f;
+
+:root:has(#color4:checked){
+    font-size: 20px;
+    $primary: red;
+}
+
+//opaques
+$light-grey-opaque: rgba(250, 250, 250, .7);
+$card-background: #323444;
+
 
 // Fonts
 $font-color-black: black;
 $font-color-white: #FAF9F6;
-$font-type: 'Roboto', sans-serif;
-$font-weigth: 400;
+$font-type: 'Urbanist', sans-serif;
+$font-weight: 400;
 $font-size: 16px;
+

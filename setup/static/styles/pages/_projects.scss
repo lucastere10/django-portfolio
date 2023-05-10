@@ -1,12 +1,14 @@
-@import '../abstract/variables';
-
 .projects-filters__form{
     display: flex;
     flex-direction: row;
-    gap: .5rem;
-    margin-left: 90px;
+    gap: 1rem;
+    margin: 0 90px;
     justify-content: center;
     align-items: center;
+    input[type=text]{
+        max-width: 400px;
+        
+    }
 }
 
 .projects-pagination{
@@ -15,6 +17,7 @@
     gap: .5rem;
     margin-left: 2rem;
     margin: 1rem 0;
+    
 }
 
 .post-wrapper{
@@ -25,3 +28,5 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
+

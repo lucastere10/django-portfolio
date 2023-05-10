@@ -1,0 +1,14 @@
+<div class="form-container">            
+    <form id="contact-form" method="POST" action="{% url 'send_email' %}" class="contact-form">
+        {% csrf_token %}
+        <a name="contact"></a>
+        <div class="row">
+            <input type="text" class="input-field" name="name" placeholder="Name">   
+            <input type="email" class="input-field" name="email" placeholder="Email">
+        </div>
+        <hr>
+        <input type="text" class="input-field" name="subject" placeholder="Subject">
+        <textarea name="message" class="input-field" rows="7" placeholder="Enter your Message"></textarea>
+        <input id="submit-btn" type="submit" value="Send" class="btn">
+    </form>
+</div>

@@ -1,0 +1,15 @@
+.resume-card-container{
+    display: flex;
+    flex-direction: column;
+    background: $light-grey;
+    box-shadow: 1px 1px 6px 0px;
+    img{
+        width: 160px;
+        height: auto;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;       
+    }
+}

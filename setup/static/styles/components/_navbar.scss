@@ -1,10 +1,9 @@
-@import '../abstract/variables';
-
 .navbar-container {
-    position:relative;
+    position: fixed;
     top:0; bottom:0; left:0;
-    width:280px;
-    height: 100vh;
+    width:260px;
+    height: 100%;
+    overflow: auto;
     background: $secondary;
     float:left;
     box-sizing: border-box;
@@ -54,15 +53,9 @@
     .navbar-socials__items{
         margin: .5rem;
         .socials-anchors{
-            &:hover,
-            &:link,
-            &:visited,
-            &:active,
-            &:link  {
-                font-size: 1.5rem;
-                color: $light-grey;
-                text-decoration: none;
-            }
+            font-size: 1.5rem;
+            color: $font-color-white;
+            text-decoration: none;
         }
     }
 }
@@ -74,20 +67,106 @@
 }
 
 .menu-anchors{
-    &:hover,
-    &:link,
-    &:visited,
-    &:active,
-    &:link  {
-        font-size: 1.5rem;
-        color: $light-grey;
-        text-decoration: none;
-    }
+    font-size: 1.5rem;
+    color: $font-color-white;
+    text-decoration: none;  
 }
 
-.navbar-socials__items, .menu-anchors {
+.navbar-socials__items, .menu-anchors, .dots-anchors {
     &:hover{
         transform: scale(1.05);
         box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+        color: $tertiary;
+    }
+    &:active{
+        color: $tertiary;
     }
 }
+
+/*.color-radios {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    input[type="radio"] {
+        appearance: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        outline: 3px solid var(--radio-color, currentColor);
+        outline-offset: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover{transform: scale(1.05);} 
+        &:checked {background-color: var(--radio-color);}
+        &#color1 {--radio-color: gray;}
+        &#color2 {--radio-color: pink;}
+        &#color3 {--radio-color: blue;}
+        &#color4 {--radio-color: green;}
+    }
+}*/
+
+.color-radios {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    input[type=radio] {
+        display: none;
+        + label {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid $font-color-white;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+            background-repeat: no-repeat;
+            background-position: center;
+            text-align: center;
+            line-height: 10px;
+            &:hover{
+                transform: scale(1.05);
+            }  
+        }
+        &#color1 + label {background-color: #064789;}
+        &#color2 + label {background-color: #212529;}
+        &#color3 + label {background-color: #7F5539;}
+        &#color4 + label {background-color: #2F184B;}
+        &:checked + label{border: 4px solid $font-color-white;}
+    }
+}
+
+/*.color-radios {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    label {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid $font-color-white;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        line-height: 10px;
+        &:hover{
+            transform: scale(1.05);
+        }
+        + input[type=radio]{
+            display: none;
+        }
+        + input{
+            background-color: red;
+        }
+
+    }
+}*/
