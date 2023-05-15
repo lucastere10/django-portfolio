@@ -29,8 +29,9 @@
         font-size: 1.2rem;
         font-weight: 700;
         grid-area: title;
-        text-decoration: underline;
-        color: var(--clr-secondary);
+        letter-spacing: 3px;
+        text-decoration: none;
+        color: darken($clr-title-yellow, 10%);
     }
     .post-subheadline {
         padding: .5rem;
@@ -93,6 +94,12 @@
                 display: block;
             } 
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        height: auto;
+        padding: .5rem;
     }
 }
 

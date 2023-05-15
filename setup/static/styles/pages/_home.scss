@@ -9,10 +9,13 @@
       "subheader img"
       "desc img"
       "btn img";
-    .home-img{
-        width: 300px;
-        height: auto;
+    .profile-img{
         grid-area: img;
+        .home-img{
+            max-width: 300px;
+            height: auto;
+            width: 100%;
+        }
     }
     .profile-name{
         grid-area: title;
@@ -40,6 +43,31 @@
         flex-direction: row;
         gap: 1rem;
     }
+    @media screen and (max-width: 600px) {
+        width:100%;
+        grid-template-rows: Auto;
+        grid-gap: 1.5rem;
+        grid-template-areas:
+          "title"
+          "subheader"
+          "desc"
+          "btn"
+          "img";
+        .home-img{width: 100%;}
+        .profile-name{
+            place-self: start start ;
+            font-size: 2rem;
+        }
+        .profile-name-subheader{ 
+            font-size: 1rem;
+            place-self: start start ;
+        }
+        .profile-desc{
+            place-self: center stretch;
+            text-align: justify;
+            max-width: 100%;
+        }
+    }
 }
 
 .profile-container{
@@ -64,11 +92,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
     font-family: 'Urbanist', sans-serif;
-    transform-style: preserve-3d;
-    flex-direction: column;
+    flex-direction: row;
     input{
         display: none;
-    }
+    }   
 }
+.mcards-featured-container{
+    display: none;
+}
+
+@media screen and (max-width: 600px) { 
+    .cards-featured-container{
+     display: none;
+    }
+    .mcards-featured-container{
+        display: flex;
+        font-family: 'Urbanist', sans-serif;
+        flex-direction: column;
+        input{
+            display: none;
+        }   
+    }
+ }

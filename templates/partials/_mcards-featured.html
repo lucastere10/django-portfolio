@@ -1,21 +1,14 @@
 {% load static %}    
-<div class="radio-inputs">
+<div class="mradio-inputs">
     {% for post in featured %}
-    <input type="radio" name="slider" id="s{{forloop.counter}}" checked>
+    <input type="radio" name="mslider" id="ms{{forloop.counter}}" checked>
     {% endfor %}
 </div>
-<div class="cards">
+<div class="mcards">
     {% for post in featured %}
-    <label for="s{{forloop.counter}}" id="slide{{forloop.counter}}">
-        <div class="card">
-            <div class="image">
-                <img src="{{post.thumbnail.url}}" alt="">
-                <div class="dots">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
+    <label for="ms{{forloop.counter}}" id="mslide{{forloop.counter}}">
+        <div class="mcard">
+            <img src="{{post.thumbnail.url}}" alt="">
             <div class="infos">
                 <span class="name">{{post.headline}}</span>
                 <span class="desc">{{post.sub_headline}}</span>

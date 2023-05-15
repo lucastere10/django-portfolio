@@ -1,12 +1,22 @@
 /* MEDIA QUERIES*/
 
+@media screen and (max-width: 1024px) {
+  .navbar-container {
+    display: none;
+  }
+  .body-section{
+    width: 100%;
+    margin: 0;
+}
+}
+
+
 @media screen and (max-width: 600px) {
   .navbar-container {
     display: none;
   }
   .body-section{
-      width: auto;
+      width: 100%;
       margin: 0;
   }
 }
-

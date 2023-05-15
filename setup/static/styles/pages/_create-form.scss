@@ -1,16 +1,26 @@
 .post-form__form{
     display: flex;
     flex-direction: column;
-    margin-left: 280px;
     gap: 1rem;
+    #id_tags {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    input[type=text]{
+        max-width: 600px;
+    }
+    .btn{
+        width: 120px;
+    }
 }
 
-#id_tags {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
 
-.btn{
-    width: 120px;
+
+.post-form-container{
+    background: var(--clr-background);
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    justify-self: center;
+    box-shadow: 1px 1px 6px 0px;
 }

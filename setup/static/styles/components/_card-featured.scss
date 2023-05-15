@@ -17,8 +17,7 @@
         
     .card {
         position: relative;
-        width: 300px;
-        height: auto;
+        height: 100%;
         background-color: $card-background;
         border-radius: 10px;
         padding: 30px 35px; 
@@ -29,8 +28,8 @@
                 border-radius: 5px;
                 box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
                 margin-top: 23px;
-                width: 70%;
-                height: 150px;
+                width: 86%;
+                height: 180px;
                 object-fit: cover;
                 &:hover{
                     transform: scale(1.05);
@@ -58,20 +57,20 @@
         .infos{
             display: block;
             text-align: end;
-            padding-top: 20px;
+            padding-top: 25px;
             span{
                 display: block;
             }
             .name{
-                font-size: 20px;
+                font-size: 18px;
                 color: var(--clr-secondary);
                 letter-spacing: 6px;
                 margin-bottom: 10px;
-                padding-left: 20%;
+                padding-left: 15%;
                 transition: all .6s ease;
             }
             .desc{
-                font-size: 12px;
+                font-size: 10px;
                 color: $font-color-white;
                 letter-spacing: 3px;
             }
@@ -122,8 +121,8 @@
         #slide2{transform: translate3d(35%, 0, -120px);}
         #slide3{transform: translate3d(70%, 0, -220px);}
         #slide1{
-            .dots :nth-child(1) {background-color: #fad00c} 
-            .name{color: #fad00c;}
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
     :has(#s2:checked){
@@ -133,8 +132,8 @@
         #slide3{transform: translate3d(35%, 0, -120px);}
         #slide4{transform: translate3d(70%, 0, -220px);}
         #slide2{
-            .dots :nth-child(1) {background-color: #fad00c} 
-            .name{color: #fad00c;}
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
     :has(#s3:checked){
@@ -144,8 +143,8 @@
         #slide4{transform: translate3d(35%, 0, -120px);}
         #slide5{transform: translate3d(70%, 0, -220px);}
         #slide3{
-            .dots :nth-child(1) {background-color: #fad00c} 
-            .name{color: #fad00c;}
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
     :has(#s4:checked){
@@ -155,8 +154,8 @@
         #slide5{transform: translate3d(35%, 0, -120px);}
         #slide1{transform: translate3d(70%, 0, -220px);}
         #slide4{
-            .dots :nth-child(1) {background-color: #fad00c} 
-            .name{color: #fad00c;}
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
     :has(#s5:checked){
@@ -166,8 +165,8 @@
         #slide1{transform: translate3d(35%, 0, -120px);}
         #slide2{transform: translate3d(70%, 0, -220px);}
         #slide5{
-            .dots :nth-child(1) {background-color: #fad00c} 
-            .name{color: #fad00c;}
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
 }
@@ -183,48 +182,3 @@
     --current-color1: #ECEAED;
     --current-color2: #404457;
 }
-
-/*
-#s1:checked~.cards #slide5,
-#s2:checked~.cards #slide1,
-#s3:checked~.cards #slide2,
-#s4:checked~.cards #slide3,
-#s5:checked~.cards #slide4 {
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(-35%, 0, -120px);
-    --current-color1: #ECEAED;
-    --current-color2: #404457;
-}
-
-#s1:checked~.cards #slide1,
-#s2:checked~.cards #slide2,
-#s3:checked~.cards #slide3,
-#s4:checked~.cards #slide4,
-#s5:checked~.cards #slide5 {
-    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
-    transform: translate3d(0, 0, 0);
-    --current-color1: #fad00c;
-    --current-color2: #ECEAED;
-}
-
-#s1:checked~.cards #slide2,
-#s2:checked~.cards #slide3,
-#s3:checked~.cards #slide4,
-#s4:checked~.cards #slide5,
-#s5:checked~.cards #slide1 {
-    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(35%, 0, -120px);
-    --current-color1: #ECEAED;
-    --current-color2: #404457;
-}
-
-#s1:checked~.cards #slide3,
-#s2:checked~.cards #slide4,
-#s3:checked~.cards #slide5,
-#s4:checked~.cards #slide1,
-#s5:checked~.cards #slide2 {
-    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
-    transform: translate3d(70%, 0, -220px);
-    --current-color1: #ECEAED;
-    --current-color2: #404457;
-}*/

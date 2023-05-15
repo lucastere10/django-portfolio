@@ -14,11 +14,21 @@
             flex-direction: row;
             gap: 1.5rem;
             align-items: baseline;
+            .input-field{
+                min-width: 200px;
+            }
         }
         input{
             margin-top: 1rem;
         }
     }
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        .contact-form .row{
+            gap: 0;
+            flex-wrap: wrap; 
+        }
+      }
 }
 
 

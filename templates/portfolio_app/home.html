@@ -11,17 +11,21 @@
                 Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
                 numquam aliquid eveniet. Similique quo at inventore provident dolor.</p>
             <div class="buttons-container">
-                <button class="profile-hireme__button btn">Hire Me</button>
-                <button class="profile-view-portfolio__button btn">View Portfolio</button>
+                <a href="{% url 'contact' %}" class="profile-hireme__button btn">Hire Me</a>
+                <a href="{% url 'projects' %}" class="profile-view-portfolio__button btn">View Portfolio</a>
             </div>
-            <img class="home-img" src='{% static "media/UserProfile.png" %}' alt="">
+            <div class="profile-img">
+                <img class="home-img" src='{% static "media/UserProfile.png" %}' alt="">
+            </div>
         </div>
     </div>
     <div class="lower-container">
         <div class="profile-container">
             <div class="profile-row">
                 <h3 class="main-title">What do I do</h3>
+                {% if request.user.is_authenticated %}
                 <a href="#" class="edit-anchor">Edit</a>
+                {% endif %}
             </div>
             <p class="text-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, recusandae! 
                 Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
@@ -30,16 +34,24 @@
         <div class="profile-container">
             <div class="profile-row">
                 <h3 class="main-title">Featured Projects</h3>
+                {% if request.user.is_authenticated %}
                 <a href="#" class="edit-anchor">Edit</a>
+                {% endif %}
+
             </div>
             <div class="cards-featured-container">
                 {% include '../partials/_cards-featured.html' %}
+            </div>
+            <div class="mcards-featured-container">
+                {% include '../partials/_mcards-featured.html' %}
             </div>
         </div>
         <div class="profile-container">
             <div class="profile-row">
                 <h3 class="main-title">Contact</h3>
+                {% if request.user.is_authenticated %}
                 <a href="#" class="edit-anchor">Edit</a>
+                {% endif %}
             </div>
             <div class="home-form-container">
                 {% include '../partials/_contact-form.html' %}

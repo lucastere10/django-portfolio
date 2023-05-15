@@ -7,9 +7,11 @@
 hr{
     border-color: rgba(255, 255, 255, 0.2);}
 
-.body{
+html, body{
     width: 100%;
     min-height: 100vh;
+    margin: 0;
+    border: 0;
 }
 
 .body-section {
@@ -39,6 +41,12 @@ hr{
         text-align: center;
         max-width: 60%;
     }
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+        .subtitle{
+            max-width: 100%;
+        }
+    }
 }
 
 /* LOWER CONTAINER */
@@ -55,6 +63,15 @@ hr{
         text-align: center;
         margin: 2rem;
         max-width: 65%;
+    }
+    .profile-container{
+        margin-top: 3rem;
+    }
+    .profile-container:nth-child(1){
+        margin-top: 0;
+    }
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
     }
 }
 
