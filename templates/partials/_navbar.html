@@ -3,21 +3,21 @@
     <section class="navbar-container">
         <a href="{% url 'home' %}" class="menu-anchors"><h2 class="navbar-name">Lucas Caldas</h2></a>
         <nav class="navbar">
-            <a href="#" class="navbar-img__anchor"><img src='{% static "media/UserProfile.png" %}' alt="Profile Image" class="navbar-img"></a>
+            <a href="#" class="navbar-img__anchor"><img src='{% static user.profile.thumbnail %}' alt="Profile Image" class="navbar-img"></a>
             <p class="navbar-desc">Welcome to my personal portfolio. Here you will find some of my projects and work in progress.</p>
             <div class="navbar-socials">
                 <ol class="navbar-socials__list">
                     <li class="navbar-socials__items">
-                        <a href="#" class="socials-anchors"><i class="bi bi-instagram fa-10x"></i></a>
+                        <a href="{{user.profile.insta}}" class="socials-anchors" target=”_blank”><i class="bi bi-instagram fa-10x"></i></a>
                     </li>
                     <li class="navbar-socials__items">
-                        <a href="#" class="socials-anchors"><i class="bi bi-github fa-fw"></i></a>
+                        <a href="{{user.profile.git}}" class="socials-anchors" target=”_blank”><i class="bi bi-github fa-fw"></i></a>
                     </li>
                     <li class="navbar-socials__items">
-                        <a href="#" class="socials-anchors"><i class="bi bi-linkedin"></i></a>
+                        <a href="{{user.profile.linkedin}}" class="socials-anchors" target=”_blank”><i class="bi bi-linkedin"></i></a>
                     </li>
                     <li class="navbar-socials__items">
-                        <a href="#" class="socials-anchors"><i class="bi bi-envelope"></i></a>
+                        <a href="{% url 'contact' %}" class="socials-anchors" target=”_blank”><i class="bi bi-envelope"></i></a>
                     </li>                
                 </ol>
             </div>
@@ -60,6 +60,7 @@
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
+                                <a href="/admin" class="config-anchors">Admin</a>
                                 <a href="{% url 'create_post' %}" class="config-anchors">Create Post</a>
                                 <a href="#" class="config-anchors">Edit Profile</a>
                                 <a href="/user/logout" class="config-anchors">Logout</a>

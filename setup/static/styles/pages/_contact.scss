@@ -3,3 +3,26 @@
     flex-direction: row;
     justify-content: center;
 }
+
+.contact-socials__list{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    .contact-socials__items{
+        margin: .3rem 0;
+        .socials-anchors{
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--clr-tertiary);
+        }
+    }
+    .contact-socials__items{
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+        }
+        &:active{
+            color: var(--clr-tertiary);
+        }
+    }
+}

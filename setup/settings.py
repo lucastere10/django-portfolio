@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path, os
 from dotenv import load_dotenv
+from django.contrib.messages import constants as messages
 
 load_dotenv()  # take environment variables from .env.
 
@@ -143,6 +144,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 MEDIA_URL = '/media/'
+
+#MESSAGES
+
+MESSAGE_TAGS={
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'sucess',
+}
 
 #EMAIL BACKEND
 

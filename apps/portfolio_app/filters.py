@@ -1,5 +1,5 @@
 import django_filters
-from django_filters import CharFilter
+from django_filters import CharFilter, ChoiceFilter
 from django import forms
 from .models import *
 

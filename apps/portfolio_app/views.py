@@ -4,18 +4,21 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import EmailMessage
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.template.loader import render_to_string
 # Create your views here.
 from .forms import postForm
 from .filters import PostFilter
 from .models import Tag,Post
 
+@login_required(login_url="../user/login")
 def home(request):
     featured = Post.objects.order_by("-date")[:5]
     print(featured)
     context = {'featured':featured}
     return render(request, 'portfolio_app/home.html', context)
 
+@login_required(login_url="../user/login")
 def projects(request):
     projects = Post.objects.filter(active = True)
     myFilter = PostFilter(request.GET, queryset=projects)
@@ -35,20 +38,23 @@ def projects(request):
     context = {'projects':projects, 'myFilter': myFilter}
     return render(request, 'portfolio_app/projects.html',context)
 
+@login_required(login_url="../user/login")
 def post(request, pk):
     post = Post.objects.get(id = pk)
     context= {'post':post}
     return render(request, 'portfolio_app/post.html', context)
 
+@login_required(login_url="../user/login")
 def resume(request):
     return render(request, 'portfolio_app/resume.html')
 
+@login_required(login_url="../user/login")
 def contact(request):
     return render(request, 'portfolio_app/contact.html')
 
 #CRUD VIEWS
 ### POST
-login_required(login_url='home')
+login_required(login_url="../user/login")
 def createPost(request):
     form = postForm()
 
@@ -62,7 +68,7 @@ def createPost(request):
     return render(request, 'portfolio_app/post_form.html', context)
 
 ### UPDATE
-login_required(login_url='home')
+login_required(login_url="../user/login")
 def updatePost(request, pk):
     post = Post.objects.get(id=pk)
     form = postForm()
@@ -77,7 +83,7 @@ def updatePost(request, pk):
     return render(request, 'portfolio_app/post_form.html', context)
 
 ### DELETE
-login_required(login_url='home')
+login_required(login_url="../user/login")
 def deletePost(request, pk):
     post = Post.objects.get(id=pk)
 

@@ -195,7 +195,6 @@ html, body {
 
 /* TEXT INPUT */
 input[type=text], input[type=email], input[type=password], select, textarea {
-  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -272,6 +271,13 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   color: #FAF9F6;
   text-decoration: none;
 }
+.navbar-socials__list .navbar-socials__items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+.navbar-socials__list .navbar-socials__items:active {
+  color: var(--clr-tertiary);
+}
 
 .navbar-menu {
   width: 100%;
@@ -286,14 +292,6 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   font-size: 1.5rem;
   color: #FAF9F6;
   text-decoration: none;
-}
-
-.navbar-socials__items:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-}
-.navbar-socials__items:active {
-  color: var(--clr-tertiary);
 }
 
 .navbar-menu__items:hover, .dots-anchors:hover {
@@ -609,7 +607,6 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  align-self: end;
 }
 .cards .card .socials i {
   font-size: 25px;
@@ -763,7 +760,6 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
 .form-container .contact-form .row {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
   align-items: baseline;
 }
 .form-container .contact-form .row .input-field {
@@ -807,6 +803,15 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 2px;
+}
+.login-form-container form {
+  gap: 0.5rem;
+}
+.login-form-container #hint_id_password1 {
+  display: none;
+}
+.login-form-container .btn {
+  margin-top: 1rem;
 }
 
 .mcards {
@@ -1021,6 +1026,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
     gap: 0.5rem;
   }
   .projects-filters__form input[type=text] {
+    width: 100%;
     max-width: 100%;
   }
 }
@@ -1064,6 +1070,27 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   justify-content: center;
 }
 
+.contact-socials__list {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.contact-socials__list .contact-socials__items {
+  margin: 0.3rem 0;
+}
+.contact-socials__list .contact-socials__items .socials-anchors {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--clr-tertiary);
+}
+.contact-socials__list .contact-socials__items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+.contact-socials__list .contact-socials__items:active {
+  color: var(--clr-tertiary);
+}
+
 .post-form__form {
   display: flex;
   flex-direction: column;
@@ -1074,7 +1101,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   flex-direction: row;
   gap: 1rem;
 }
-.post-form__form input[type=text] {
+.post-form__form #id_author, .post-form__form input[type=text] {
   max-width: 600px;
 }
 .post-form__form .btn {
@@ -1089,4 +1116,11 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   box-shadow: 1px 1px 6px 0px;
 }
 
+/*.navbar-container{
+    display: none;
+}
+
+.body-section {
+    margin-left: 0;
+}*/
 /* BOOTSRAP *//*# sourceMappingURL=style.css.map */

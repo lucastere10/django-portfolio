@@ -15,7 +15,6 @@
                 {% else %}
                     <p class="subtitle">Please login to see this page.</p>
                 {% endif %}
-
             {% endif %}
             <form method="post">
             {% csrf_token %} {{form|crispy}}

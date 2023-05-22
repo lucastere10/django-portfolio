@@ -24,4 +24,14 @@
         font-weight: 700;
         letter-spacing: 2px;
     }
+    form {
+        gap: .5rem;
+    }
+    #hint_id_password1{
+        display: none;
+    }
+    .btn {
+        margin-top: 1rem;
+    }
 }
+
