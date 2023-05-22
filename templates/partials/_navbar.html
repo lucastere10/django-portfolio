@@ -47,9 +47,32 @@
                 </ol>
             </div>
             <hr>
-            {% if request.user.is_authenticated %}
-                <a href="{% url 'create_post' %}" class="menu-anchors">Create Post</a>
-            {% endif %}
+            <div class="navbar-config">
+                {% if request.user.is_authenticated %}
+                    <div class="accordion-item navbar-accordion">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" 
+                        aria-controls="flush-collapseOne">
+                            <img src='{% static "media/UserProfile.png" %}' alt="thumb" class="profile-img">
+                            Logged as {{user.username}}
+                        </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <a href="{% url 'create_post' %}" class="config-anchors">Create Post</a>
+                                <a href="#" class="config-anchors">Edit Profile</a>
+                                <a href="/user/logout" class="config-anchors">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="navbar-noauth">
+                        <a href="/user/login" class="config-anchors" id="anchor-login">Login</a>
+                        <a href="/user/register" class="config-anchors" id="anchor-login">Register</a>              
+                    </div>
+                {% endif %}
+            </div>
             <div class="color-radios">
                 <input type="radio" id="color1" name="theme">
                 <label for="color1"></label>
@@ -62,5 +85,6 @@
             </div>
         </nav>
     </section>
-    <section class="navbar-app"></section>
+    <section class="navbar-container-small"></section>
+    <section class="navbar-container-mobile"></section>
 </header>

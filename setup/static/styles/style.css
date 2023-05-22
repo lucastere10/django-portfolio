@@ -20,10 +20,10 @@ $heavy-grey: #4f4f4f;
 }
 
 :root:has(#color1:checked) {
-  --clr-primary: #EBF2FA;
-  --clr-secondary: #3B7EEB;
-  --clr-tertiary: #064789;
-  --clr-background: #fafafa;
+  --clr-primary: #cbe5f6;
+  --clr-secondary: #185d8b;
+  --clr-tertiary: #0f3a57;
+  --clr-background: #eef6fc;
   --heavy-grey: #4f4f4f;
 }
 
@@ -69,7 +69,7 @@ html, body {
 }
 
 .body-section {
-  margin-left: 260px;
+  margin-left: 240px;
   /* font */
   font-family: "Urbanist", sans-serif;
   font-size: 16px;
@@ -135,7 +135,7 @@ html, body {
 /* FOOTER */
 .footer-contaier {
   position: relative;
-  margin-top: 400px;
+  margin-top: 1rem;
 }
 .footer-contaier .footer-text {
   text-align: center;
@@ -145,6 +145,9 @@ html, body {
 @media screen and (max-width: 1024px) {
   .navbar-container {
     display: none;
+  }
+  .navbar-container-small {
+    display: block;
   }
   .body-section {
     width: 100%;
@@ -160,7 +163,6 @@ html, body {
     margin: 0;
   }
 }
-/* COMPONENTS */
 /* BUTTONS */
 .btn {
   font-family: "Urbanist", sans-serif;
@@ -192,7 +194,7 @@ html, body {
 }
 
 /* TEXT INPUT */
-input[type=text], input[type=email], select, textarea {
+input[type=text], input[type=email], input[type=password], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -202,8 +204,13 @@ input[type=text], input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[type=email]:active, select:hover, select:active, textarea:hover, textarea:active {
+input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[type=email]:active, input[type=password]:hover, input[type=password]:active, select:hover, select:active, textarea:hover, textarea:active {
   box-shadow: 0px 0px 6px 0px var(--clr-tertiary);
+}
+
+/* COMPONENTS */
+.navbar-container-small, .navbar-container-mobile {
+  display: none;
 }
 
 .navbar-container {
@@ -211,7 +218,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   top: 0;
   bottom: 0;
   left: 0;
-  width: 260px;
+  width: 240px;
   height: 100%;
   overflow: auto;
   background: var(--clr-secondary);
@@ -235,7 +242,6 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   align-items: center;
   justify-content: center;
   padding: 16px;
-  gap: 0.5rem;
 }
 .navbar .navbar-img {
   width: 160px;
@@ -249,8 +255,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   text-align: center;
 }
 .navbar hr {
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   width: 100%;
   padding: 0;
 }
@@ -260,7 +265,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   flex-direction: row;
 }
 .navbar-socials__list .navbar-socials__items {
-  margin: 0.5rem;
+  margin: 0.3rem 0;
 }
 .navbar-socials__list .navbar-socials__items .socials-anchors {
   font-size: 1.5rem;
@@ -268,9 +273,12 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   text-decoration: none;
 }
 
-.navbar-menu__items {
+.navbar-menu {
+  width: 100%;
+}
+.navbar-menu .navbar-menu__items {
   display: flex;
-  margin: 8px 0;
+  margin: 2px;
   align-items: flex-start;
 }
 
@@ -280,37 +288,83 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   text-decoration: none;
 }
 
-.navbar-socials__items:hover, .menu-anchors:hover, .dots-anchors:hover {
+.navbar-socials__items:hover {
   transform: scale(1.05);
   box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-  color: var(--clr-tertiary);
 }
-.navbar-socials__items:active, .menu-anchors:active, .dots-anchors:active {
+.navbar-socials__items:active {
   color: var(--clr-tertiary);
 }
 
-/*.color-radios {
-    width: 100%;
-    margin-top: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    input[type="radio"] {
-        appearance: none;
-        width: 1.5rem;
-        height: 1.5rem;
-        outline: 3px solid var(--radio-color, currentColor);
-        outline-offset: 3px;
-        border-radius: 50%;
-        cursor: pointer;
-        &:hover{transform: scale(1.05);} 
-        &:checked {background-color: var(--radio-color);}
-        &#color1 {--radio-color: gray;}
-        &#color2 {--radio-color: pink;}
-        &#color3 {--radio-color: blue;}
-        &#color4 {--radio-color: green;}
-    }
-}*/
+.navbar-menu__items:hover, .dots-anchors:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  background-color: var(--clr-tertiary);
+  border-radius: 5px;
+}
+.navbar-menu__items:active, .dots-anchors:active {
+  color: var(--clr-tertiary);
+}
+
+.navbar-noauth {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--clr-tertiary);
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 0.5rem;
+  justify-self: center;
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+.navbar-noauth #anchor-login {
+  margin-left: 0;
+}
+.navbar-noauth a {
+  text-decoration: none;
+  color: #FAF9F6;
+  margin-left: 10px;
+}
+.navbar-noauth a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.navbar-accordion {
+  background: var(--clr-tertiary);
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.navbar-accordion .accordion-button {
+  background-color: #323444;
+  color: #FAF9F6;
+  gap: 0.1rem;
+  border: none;
+}
+.navbar-accordion .accordion-button .profile-img {
+  width: 48px;
+  border-radius: 50%;
+}
+.navbar-accordion .collapsed {
+  background-color: var(--clr-tertiary);
+}
+.navbar-accordion a {
+  text-decoration: none;
+  color: #FAF9F6;
+  margin-left: 10px;
+}
+.navbar-accordion a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.navbar-accordion .accordion-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .color-radios {
   width: 100%;
   margin-top: 16px;
@@ -339,7 +393,7 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   transform: scale(1.05);
 }
 .color-radios input[type=radio]#color1 + label {
-  background-color: #064789;
+  background-color: #0f3a57;
 }
 .color-radios input[type=radio]#color2 + label {
   background-color: #212529;
@@ -354,37 +408,6 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   border: 4px solid #FAF9F6;
 }
 
-/*.color-radios {
-    width: 100%;
-    margin-top: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    label {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        vertical-align: middle;
-        cursor: pointer;
-        border-radius: 50%;
-        border: 2px solid $font-color-white;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
-        background-repeat: no-repeat;
-        background-position: center;
-        text-align: center;
-        line-height: 10px;
-        &:hover{
-            transform: scale(1.05);
-        }
-        + input[type=radio]{
-            display: none;
-        }
-        + input{
-            background-color: red;
-        }
-
-    }
-}*/
 .post {
   display: grid;
   position: relative;
@@ -757,6 +780,33 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
     gap: 0;
     flex-wrap: wrap;
   }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  overflow: auto;
+  background: var(--clr-background);
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  box-shadow: 1px 1px 6px 0px;
+  gap: 0.5rem;
+}
+.login-form-container .main-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .mcards {

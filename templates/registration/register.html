@@ -1,0 +1,15 @@
+{% extends '../shared/base.html' %}
+{% load crispy_forms_tags %} {% block content %}
+<section class="post-section body-section">
+    <div class="login-container">
+        <div class="login-form-container">
+            <div class="main-title">Registration</div>
+            <form method="post">
+                {% csrf_token %} {{form|crispy}}
+                <P>Have an account? Login <a href="../login/">Here</a>!</P>
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

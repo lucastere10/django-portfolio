@@ -1,0 +1,30 @@
+{% extends '../shared/base.html' %}
+{% load crispy_forms_tags %} {% block content %}
+<section class="post-section body-section">
+    <div class="login-container">
+        <div class="login-form-container">
+            <div class="main-title">Login</div>
+            {% if form.errors %}
+            <p class="subtitle">Your username and password didn't match. Please try again.</p>
+            {% endif %}
+
+            {% if next %}
+                {% if user.is_authenticated %}
+                    <p class="subtitle">Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                {% else %}
+                    <p class="subtitle">Please login to see this page.</p>
+                {% endif %}
+
+            {% endif %}
+            <form method="post">
+            {% csrf_token %} {{form|crispy}}
+            <P>Don't have an account? Create one <a href="../register/">Here</a>!</P>
+            <br>
+            <button type="submit" class="btn">Login</button>
+            </form>
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
