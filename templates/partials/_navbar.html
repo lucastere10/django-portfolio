@@ -1,9 +1,9 @@
 {% load static %}
 <header>  
     <section class="navbar-container">
-        <a href="{% url 'home' %}" class="menu-anchors"><h2 class="navbar-name">Lucas Caldas</h2></a>
+        <a href="{% url 'home' %}" class="menu-anchors"><h2 class="navbar-name">{{user.profile.name}}<h2></a>
         <nav class="navbar">
-            <a href="#" class="navbar-img__anchor"><img src='{% static user.profile.thumbnail %}' alt="Profile Image" class="navbar-img"></a>
+            <a href="#" class="navbar-img__anchor"><img src="{{user.profile.thumbnail.url}}" alt="Profile Image" class="rounded-circle navbar-img"></a>
             <p class="navbar-desc">Welcome to my personal portfolio. Here you will find some of my projects and work in progress.</p>
             <div class="navbar-socials">
                 <ol class="navbar-socials__list">
@@ -54,7 +54,7 @@
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#flush-collapseOne" aria-expanded="false" 
                         aria-controls="flush-collapseOne">
-                            <img src='{% static "media/UserProfile.png" %}' alt="thumb" class="profile-img">
+                            <img src="{{user.profile.thumbnail.url}}" alt="thumb" class="rounded-circle profile-img">
                             Logged as {{user.username}}
                         </button>
                         </h2>
@@ -62,7 +62,7 @@
                             <div class="accordion-body">
                                 <a href="/admin" class="config-anchors">Admin</a>
                                 <a href="{% url 'create_post' %}" class="config-anchors">Create Post</a>
-                                <a href="#" class="config-anchors">Edit Profile</a>
+                                <a href="{% url 'edit_profile' %}"  class="config-anchors">Edit Profile</a>
                                 <a href="/user/logout" class="config-anchors">Logout</a>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 .resume-card-container{
     display: flex;
     flex-direction: column;
-    background: $light-grey;
+    background: var(--clr-background);
     box-shadow: 1px 1px 6px 0px;
     img{
         width: 160px;

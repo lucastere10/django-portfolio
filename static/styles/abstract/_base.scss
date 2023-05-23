@@ -7,13 +7,15 @@
 hr{
     border-color: rgba(255, 255, 255, 0.2);}
 
-.body{
+html, body{
     width: 100%;
     min-height: 100vh;
+    margin: 0;
+    border: 0;
 }
 
 .body-section {
-    margin-left: 260px;
+    margin-left: 240px;
     /* font */
     font-family: $font-type;
     font-size: $font-size;
@@ -26,7 +28,7 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: $light-grey;
+    background: var(--clr-background);
     padding: 48px;
     gap: 16px;
     .main-title{
@@ -38,6 +40,12 @@ hr{
         font-size: 1rem;
         text-align: center;
         max-width: 60%;
+    }
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+        .subtitle{
+            max-width: 100%;
+        }
     }
 }
 
@@ -56,13 +64,22 @@ hr{
         margin: 2rem;
         max-width: 65%;
     }
+    .profile-container{
+        margin-top: 3rem;
+    }
+    .profile-container:nth-child(1){
+        margin-top: 0;
+    }
+    @media screen and (max-width: 600px) {
+        padding: 1.5rem;
+    }
 }
 
 /* FOOTER */
 
 .footer-contaier{
     position: relative;
-    margin-top: 400px;
+    margin-top: 1rem;
     .footer-text{
         text-align: center;
     }

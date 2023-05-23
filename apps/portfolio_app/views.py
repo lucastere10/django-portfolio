@@ -71,7 +71,7 @@ def createPost(request):
 login_required(login_url="../user/login")
 def updatePost(request, pk):
     post = Post.objects.get(id=pk)
-    form = postForm()
+    form = postForm(instance=post)
 
     if request.method == 'POST':
         form = postForm(request.POST, request.FILES, instance = post)

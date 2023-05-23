@@ -33,9 +33,8 @@
     padding: 16px;
     .navbar-img{
         width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        object-fit: scale-down;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;    /* making sure the image isn't distorted */
     } 
 
     *{
@@ -134,8 +133,8 @@
         gap: .1rem;
         border: none;
         .profile-img{
-            width: 48px;
-            border-radius: 50%;
+            width: 40px;
+            aspect-ratio: 1 / 1;
         }
     }
     .collapsed{background-color: var(--clr-tertiary);}

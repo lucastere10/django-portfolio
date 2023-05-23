@@ -4,9 +4,9 @@ font-family: $font-type;
 font-weight: 700;
 font-size: 1rem;
 color: #fff;
-background-color: $tertiary;
+background-color: var(--clr-tertiary);
 padding: 10px 20px;
-border: solid $tertiary 2px;
+border: solid var(--clr-tertiary) 2px;
 box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
 border-radius: 8px;
 transition : 719ms;
@@ -24,13 +24,12 @@ transition : 719ms;
 padding: 10px 30px;
 transform : translateY(-5px);
 background-color: #fff;
-color: $tertiary;
-border: solid 2px $tertiary;
+color: var(--clr-tertiary);
+border: solid 2px var(--clr-tertiary);
 }
 
 /* TEXT INPUT */
-input[type=text], input[type=email], select, textarea {
-  width: 100%;
+input[type=text], input[type=email], input[type=password], select, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -39,6 +38,6 @@ input[type=text], input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
   &:hover, &:active{
-    box-shadow: 0px 0px 6px 0px $tertiary;
+    box-shadow: 0px 0px 6px 0px var(--clr-tertiary);
   }
 }

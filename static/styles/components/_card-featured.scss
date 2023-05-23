@@ -1,99 +1,183 @@
 .cards{
-    display: flex;
-    flex-wrap: row wrap;
-    gap: 1rem;
+    position: relative;
+    height: 500px;
+    width: 300px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    label {
+        position: absolute;
+        width: 300px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 0.55s ease;
+    }
+        
+    .card {
+        position: relative;
+        height: 100%;
+        background-color: $card-background;
+        border-radius: 10px;
+        padding: 30px 35px; 
+        .image{
+            display: flex;
+            justify-content: space-between;
+            img{
+                border-radius: 5px;
+                box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
+                margin-top: 23px;
+                width: 86%;
+                height: 180px;
+                object-fit: cover;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+            .dots{
+                text-align: center;
+                div{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                    &:nth-child(1){
+                        background-color: var(--clr-secondary);
+                    }
+                    &:nth-child(2){
+                        background-color: var(--clr-tertiary);
+                    }
+                    &:nth-child(3){
+                        background-color: #000;
+                    }
+                }
+            }    
+        }
+        .infos{
+            display: block;
+            text-align: end;
+            padding-top: 25px;
+            span{
+                display: block;
+            }
+            .name{
+                font-size: 18px;
+                color: var(--clr-secondary);
+                letter-spacing: 6px;
+                margin-bottom: 10px;
+                padding-left: 15%;
+                transition: all .6s ease;
+            }
+            .desc{
+                font-size: 10px;
+                color: $font-color-white;
+                letter-spacing: 3px;
+            }
+        }
+        .read-btn{
+            width: 100%;
+            margin: 13px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 10px;
+            font-weight: 700;
+            &:link { text-decoration: none;}
+        }
+        .socials{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            i{
+                font-size: 25px;
+                transition: all .7s ease;
+                color: var(--clr-background);
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+                }
+            }
+            .bi-share{
+                &:hover, &:active{color:darkgreen}
+            }
+            .bi-trash{
+                &:hover, &:active{color:darkred}
+            }
+            .bi-file-earmark-plus{
+                &:hover, &:active{color: var(--clr-tertiary)}
+            }
+        }
+    }
 }
 
-.card {
-    position: relative;
-    width: 300px;
-    height: 450px;
-    background-color: $card-background;
-    border-radius: 10px;
-    padding: 30px 35px; 
-    .image{
-        display: flex;
-        justify-content: space-between;
-        img{
-            border-radius: 5px;
-            box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
-            margin-top: 23px;
-            width: 70%;
-            height: 150px;
-            object-fit: cover;
-        }
-        .dots{
-            text-align: center;
-            div{
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                margin-bottom: 10px;
-                &:nth-child(1){
-                    background-color: $secondary;
-                }
-                &:nth-child(2){
-                    background-color: $tertiary;
-                }
-                &:nth-child(3){
-                    background-color: #000;
-                }
-            }
-        }    
-    }
-    .infos{
-        display: block;
-        text-align: end;
-        padding-top: 20px;
-        span{
-            display: block;
-        }
-        .name{
-            font-size: 20px;
-            color: $secondary;
-            letter-spacing: 6px;
-            margin-bottom: 10px;
-            padding-left: 20%;
-            transition: all .6s ease;
-        }
-        .desc{
-            font-size: 12px;
-            color: $font-color-white;
-            letter-spacing: 3px;
+.profile-container{
+    :has(#s1:checked){
+        #slide4{transform: translate3d(-70%, 0, -220px);}
+        #slide5{transform: translate3d(-35%, 0, -120px);}
+        #slide1{transform: translate3d(0, 0, 0);}
+        #slide2{transform: translate3d(35%, 0, -120px);}
+        #slide3{transform: translate3d(70%, 0, -220px);}
+        #slide1{
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
-    .read-btn{
-        width: 100%;
-        margin: 13px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        letter-spacing: 10px;
-        font-weight: 700;
-        &:link { text-decoration: none;}
-    }
-    .socials{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 10px;
-        i{
-            font-size: 25px;
-            transition: all .7s ease;
-            color: $light-grey;
-            &:hover{
-                transform: scale(1.05);
-                box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
-            }
-        }
-        .bi-share{
-            &:hover, &:active{color:darkgreen}
-        }
-        .bi-trash{
-            &:hover, &:active{color:darkred}
-        }
-        .bi-file-earmark-plus{
-            &:hover, &:active{color: $tertiary}
+    :has(#s2:checked){
+        #slide5{transform: translate3d(-70%, 0, -220px);}
+        #slide1{transform: translate3d(-35%, 0, -120px);}
+        #slide2{transform: translate3d(0, 0, 0);}
+        #slide3{transform: translate3d(35%, 0, -120px);}
+        #slide4{transform: translate3d(70%, 0, -220px);}
+        #slide2{
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
         }
     }
+    :has(#s3:checked){
+        #slide1{transform: translate3d(-70%, 0, -220px);}
+        #slide2{transform: translate3d(-35%, 0, -120px);}
+        #slide3{transform: translate3d(0, 0, 0);}
+        #slide4{transform: translate3d(35%, 0, -120px);}
+        #slide5{transform: translate3d(70%, 0, -220px);}
+        #slide3{
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
+        }
+    }
+    :has(#s4:checked){
+        #slide2{transform: translate3d(-70%, 0, -220px);}
+        #slide3{transform: translate3d(-35%, 0, -120px);}
+        #slide4{transform: translate3d(0, 0, 0);}
+        #slide5{transform: translate3d(35%, 0, -120px);}
+        #slide1{transform: translate3d(70%, 0, -220px);}
+        #slide4{
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
+        }
+    }
+    :has(#s5:checked){
+        #slide3{transform: translate3d(-70%, 0, -220px);}
+        #slide4{transform: translate3d(-35%, 0, -120px);}
+        #slide5{transform: translate3d(0, 0, 0);}
+        #slide1{transform: translate3d(35%, 0, -120px);}
+        #slide2{transform: translate3d(70%, 0, -220px);}
+        #slide5{
+            .dots :nth-child(1) {background-color: $clr-title-yellow} 
+            .name{color: $clr-title-yellow;}
+        }
+    }
+}
+
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
 }

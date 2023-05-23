@@ -15,24 +15,27 @@
                     <h3 class="subtitle">Aspiring Engineer</h3>
                 </div>
                 <div class="resume-contacts">
-                    <p>cellphone</p>
-                    <p>email</p>
-                    <p>website</p>
-                    <p>location</p>
+                    <p>cellphone: {{user.profile.phone}}</p>
+                    <p>email: {{user.email}}</p>
+                    <p>website: {{user.insta}}</p>
+                    <p>location: {{user.adress}}</p>
                 </div>
             </div>
             <hr>
             <div class="resume-mid-row row">
-                <img src='{% static "media/UserProfile.png" %}' alt="">
+                <img src="{{user.profile.thumbnail.url}}" alt="">
                 <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, in amet excepturi atque ratione illo exercitationem
                     quod doloremque laboriosam ut rem doloribus harum nulla soluta impedit dolores veniam voluptatibus. Voluptate!</h3>
             </div>
             <hr>
             <div class="resume-lower-row row">
                 <h3 class="main-title">SKILLS</h3>
+                <p>{{user.profile.skills}}</p>
                 <h3 class="main-title">EDUCATION</h3>
+                <p>{{user.profile.education}}</p>
                 <h3 class="main-title">PROJECTS</h3>
                 <h3 class="main-title">LANGUAGES</h3>
+                <p>{{user.profile.languages}}</p>
             </div>
         </div>
     </div>

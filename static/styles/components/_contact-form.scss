@@ -1,7 +1,7 @@
 .form-container{
     width: 70%;
     max-width: 750px;
-    background: $light-grey;
+    background: var(--clr-background);
     border-radius: 5px;
     padding: 1rem 2rem;
     justify-self: center;
@@ -12,13 +12,22 @@
         .row{
             display: flex;
             flex-direction: row;
-            gap: 1.5rem;
             align-items: baseline;
+            .input-field{
+                min-width: 200px;
+            }
         }
         input{
             margin-top: 1rem;
         }
     }
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        .contact-form .row{
+            gap: 0;
+            flex-wrap: wrap; 
+        }
+      }
 }
 
 

@@ -15,7 +15,7 @@
                 <a href="{% url 'projects' %}" class="profile-view-portfolio__button btn">View Portfolio</a>
             </div>
             <div class="profile-img">
-                <img class="home-img" src='{% static "media/UserProfile.png" %}' alt="">
+                <img class="home-img" src="{{user.profile.thumbnail.url}}" alt="">
             </div>
         </div>
     </div>
