@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'bootstrap5',
     'crispy_forms',
     'crispy_bootstrap5',
@@ -161,7 +162,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER =  str(os.getenv('EMAIL_HOST_USER'))
 EMAIL_PASSWORD =  str(os.getenv('EMAIL_PASSWORD'))
 
-#CKEDITOR CONFIG
+#CKEDITOR AND SUMMERNOTE CONFIG
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
 
@@ -170,6 +171,14 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'full',
         'height': 400,
         'width': 1100,
+    },
+}
+
+SUMMERNOTE_CONFIG = {
+    # You can put custom Summernote settings
+    'summernote': {
+        # Change editor size
+        'width': '100%',
     },
 }
 

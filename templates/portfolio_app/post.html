@@ -1,8 +1,8 @@
 {% extends '../shared/base.html' %}
 {% load static %}
 {% block content %}
+{% include '../partials/_navbar.html' %}
 <!-- content goes here -->
-
 <section class="post-section body-section">
     <div class="upper-container">
         <h2 class="post-title main-title">{{post.headline}}</h2>
@@ -13,7 +13,7 @@
     <div class="post-container lower-container">
         <p class="post-body">{{post.body|safe}}</p>
         <hr>
-        <p class="post-date">{{post.date}}</p>
+        <p class="post-date">{{post.date}} | <a href="{% url 'update_post' post.id %}">Edit</a></p>
     </div>
 </section>
 {% endblock content %}

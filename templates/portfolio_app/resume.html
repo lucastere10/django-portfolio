@@ -1,6 +1,7 @@
 {% extends '../shared/base.html' %}
 {% load static %}
 {% block content %}
+{% include '../partials/_navbar.html' %}
 <!-- content goes here -->
 <section class="resume-section body-section">
     <div class="resume-upper upper-container">
@@ -10,32 +11,31 @@
     <div class="resume-container lower-container">
         <div class="resume-card-container">
             <div class="resume-upper-row row">
-                <div class="resume-titles">
-                    <h2 class="main-title">Lucas Caldas</h2>
-                    <h3 class="subtitle">Aspiring Engineer</h3>
+                <div class="resume-titles col-12 col-md-8">
+                    <h2 class="resume-title">{{profile.name}}</h2>
+                    <h3 class="resume-subtitle">{{profile.subtitle}}</h3>
                 </div>
-                <div class="resume-contacts">
-                    <p>cellphone: {{user.profile.phone}}</p>
-                    <p>email: {{user.email}}</p>
-                    <p>website: {{user.insta}}</p>
-                    <p>location: {{user.adress}}</p>
+                <div class="resume-contacts col-12 col-md-4">
+                    <p class="resume-socials"><i class="bi bi-phone"></i> {{profile.phone}}</p>
+                    <p class="resume-socials"><i class="bi bi-envelope"></i> <a href="{{user.email}}" class="">{{user.email}}</a></p>
+                    <p class="resume-socials"><i class="bi bi-instagram"></i> <a href="{{profile.insta}}" class="">instagram</a></p>
+                    <p class="resume-socials"><i class="bi bi-map"></i> {{profile.adress}}</p>
                 </div>
             </div>
             <hr>
             <div class="resume-mid-row row">
-                <img src="{{user.profile.thumbnail.url}}" alt="">
-                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, in amet excepturi atque ratione illo exercitationem
-                    quod doloremque laboriosam ut rem doloribus harum nulla soluta impedit dolores veniam voluptatibus. Voluptate!</h3>
+                <img class="col-md-4" src="{{profile.profile_img.url}}" alt="">
+                <h3 class="col-md-8">{{profile.summary}}</h3>
             </div>
             <hr>
             <div class="resume-lower-row row">
-                <h3 class="main-title">SKILLS</h3>
-                <p>{{user.profile.skills}}</p>
-                <h3 class="main-title">EDUCATION</h3>
-                <p>{{user.profile.education}}</p>
-                <h3 class="main-title">PROJECTS</h3>
-                <h3 class="main-title">LANGUAGES</h3>
-                <p>{{user.profile.languages}}</p>
+                <h3 class="topic-title">SKILLS</h3>
+                <p>{{profile.skills}}</p>
+                <h3 class="topic-title">EDUCATION</h3>
+                <p>{{profile.education}}</p>
+                <h3 class="topic-title">PROJECTS</h3>
+                <h3 class="topic-title">LANGUAGES</h3>
+                <p>{{profile.languages}}</p>
             </div>
         </div>
     </div>

@@ -1,15 +1,39 @@
+.resume-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .resume-card-container{
     display: flex;
     flex-direction: column;
     background: var(--clr-background);
     box-shadow: 1px 1px 6px 0px;
-    img{
-        width: 160px;
-        height: auto;
+    max-width: 750px;
+    padding: 2rem;
+    .resume-title{
+        font-size: 3rem;
+        letter-spacing: 2px;
+        font-weight: 700;
     }
-    .row{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;       
+    .resume-subtitle{
+        letter-spacing: 2px;
+        margin-top: .5rem;
+    }
+    .resume-socials{
+        font-size: .75rem;
+        margin: .5rem 0;
+    }
+    img{
+        max-width: 100%;
+        width: 100px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+    .topic-title{
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin: 1.5rem 0 .5rem 0;
     }
 }

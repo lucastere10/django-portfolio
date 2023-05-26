@@ -1,24 +1,25 @@
 {% extends '../shared/base.html' %}
 {% load static %}
 {% block content %}
+{% include '../partials/_navbar.html' %}
 <!-- content goes here -->
 <section class="contact-section body-section">
     <div class="contact-upper upper-container">
         <h2 class="contact-title main-title">Contact</h2>
         <p class="subtitle">Interested in hiring me for your project or just want to say hi? 
-        You can fill in the contact form below or send me an email to {{user.email}}</p>
+        You can fill in the contact form below or send an email to <strong>{{user.email}}</strong></p>
         <ol class="contact-socials__list">
             <li class="contact-socials__items">
-                <a href="#" class="socials-anchors"><i class="bi bi-instagram fa-10x"></i></a>
+                <a href="{{profile.insta}}" class="socials-anchors" target=”_blank”><i class="bi bi-instagram fa-10x"></i></a>
             </li>
             <li class="contact-socials__items">
-                <a href="#" class="socials-anchors"><i class="bi bi-github fa-fw"></i></a>
+                <a href="{{profile.git}}" class="socials-anchors" target=”_blank”><i class="bi bi-github fa-fw"></i></a>
             </li>
             <li class="contact-socials__items">
-                <a href="#" class="socials-anchors"><i class="bi bi-linkedin"></i></a>
+                <a href="{{profile.linkedin}}" class="socials-anchors" target=”_blank”><i class="bi bi-linkedin"></i></a>
             </li>
             <li class="contact-socials__items">
-                <a href="#" class="socials-anchors"><i class="bi bi-envelope"></i></a>
+                <a href="#" class="socials-anchors" target=”_blank”><i class="bi bi-envelope"></i></a>
             </li>                
         </ol>
         <p class="subtitle">Want to get connected? Follow me on the social channels below.</p>

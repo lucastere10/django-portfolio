@@ -17,11 +17,11 @@
     overflow: auto;
     border-radius:12px;
     .thumbnail {
-        width: 100%;
-        max-height: 100%;
+        width: 80%;
+        aspect-ratio: 1/1;
         grid-area: img;
         align-self: center;
-        margin-left: .5rem;
+        margin-left: 1.3rem;
         box-shadow: 15px 15px 40px rgba(0, 0, 0, 50%);
     }
     .post-headline {

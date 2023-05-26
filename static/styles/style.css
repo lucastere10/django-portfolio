@@ -244,10 +244,12 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
 }
 .navbar .navbar-img {
   width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  -o-object-fit: scale-down;
-     object-fit: scale-down;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover; /* making sure the image isn't distorted */
+}
+.navbar .navbar-desc {
+  font-size: 0.8rem;
 }
 .navbar * {
   padding: 0.2rem;
@@ -341,8 +343,8 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   border: none;
 }
 .navbar-accordion .accordion-button .profile-img {
-  width: 48px;
-  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1/1;
 }
 .navbar-accordion .collapsed {
   background-color: var(--clr-tertiary);
@@ -424,11 +426,11 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   /*hover efects*/
 }
 .post .thumbnail {
-  width: 100%;
-  max-height: 100%;
+  width: 80%;
+  aspect-ratio: 1/1;
   grid-area: img;
   align-self: center;
-  margin-left: 0.5rem;
+  margin-left: 1.3rem;
   box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.5);
 }
 .post .post-headline {
@@ -745,36 +747,20 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
 }
 
 .form-container {
-  width: 70%;
-  max-width: 750px;
   background: var(--clr-background);
   border-radius: 5px;
   padding: 1rem 2rem;
-  justify-self: center;
   box-shadow: 1px 1px 6px 0px;
+  width: 70%;
+  max-width: 750px;
 }
-.form-container .contact-form {
-  display: flex;
-  flex-direction: column;
-}
-.form-container .contact-form .row {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-.form-container .contact-form .row .input-field {
-  min-width: 200px;
-}
-.form-container .contact-form input {
-  margin-top: 1rem;
+.form-container input, .form-container .input-field {
+  display: inline-block;
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
   .form-container {
     width: 100%;
-  }
-  .form-container .contact-form .row {
-    gap: 0;
-    flex-wrap: wrap;
   }
 }
 
@@ -1048,20 +1034,45 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
   justify-content: space-around;
 }
 
+.resume-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .resume-card-container {
   display: flex;
   flex-direction: column;
   background: var(--clr-background);
   box-shadow: 1px 1px 6px 0px;
+  max-width: 750px;
+  padding: 2rem;
+}
+.resume-card-container .resume-title {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.resume-card-container .resume-subtitle {
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+.resume-card-container .resume-socials {
+  font-size: 0.75rem;
+  margin: 0.5rem 0;
 }
 .resume-card-container img {
-  width: 160px;
-  height: auto;
+  max-width: 100%;
+  width: 100px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.resume-card-container .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.resume-card-container .topic-title {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem 0;
 }
 
 .contact-body {
@@ -1123,4 +1134,39 @@ input[type=text]:hover, input[type=text]:active, input[type=email]:hover, input[
 .body-section {
     margin-left: 0;
 }*/
+.edit-profile-section .edit-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.edit-profile-section .edit-profile-container .edit-grid {
+  background: var(--clr-background);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  box-shadow: 1px 1px 6px 0px;
+}
+.edit-profile-section .edit-profile-container .edit-grid label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.1rem;
+}
+.edit-profile-section .edit-profile-container .edit-grid .form-text {
+  display: none;
+}
+.edit-profile-section .edit-profile-container .edit-grid .form-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.edit-profile-section .edit-profile-container .edit-grid .edit-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.edit-profile-section img {
+  width: 160px;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* BOOTSRAP *//*# sourceMappingURL=style.css.map */

@@ -9,20 +9,22 @@ from django.template.loader import render_to_string
 # Create your views here.
 from .forms import postForm
 from .filters import PostFilter
-from .models import Tag,Post
+from .models import Tag, Post
+from apps.user_app.models import PageProfile
 
-@login_required(login_url="../user/login")
 def home(request):
     featured = Post.objects.order_by("-date")[:5]
+    profile = PageProfile.objects.get(name="Lucas Caldas") 
     print(featured)
-    context = {'featured':featured}
+    context = {'featured':featured, 'profile':profile}
     return render(request, 'portfolio_app/home.html', context)
 
-@login_required(login_url="../user/login")
 def projects(request):
     projects = Post.objects.filter(active = True)
     myFilter = PostFilter(request.GET, queryset=projects)
     projects = myFilter.qs
+    profile = PageProfile.objects.get(name="Lucas Caldas") 
+
 
     page = request.GET.get('page')
     paginator = Paginator(projects, 6)
@@ -35,36 +37,38 @@ def projects(request):
         projects = paginator.page(paginator.num_pages)
 
 
-    context = {'projects':projects, 'myFilter': myFilter}
+    context = {'projects':projects, 'myFilter': myFilter, 'profile':profile}
     return render(request, 'portfolio_app/projects.html',context)
 
-@login_required(login_url="../user/login")
 def post(request, pk):
+    profile = PageProfile.objects.get(name="Lucas Caldas")
     post = Post.objects.get(id = pk)
-    context= {'post':post}
+    context= {'post':post, 'profile':profile}
     return render(request, 'portfolio_app/post.html', context)
 
-@login_required(login_url="../user/login")
 def resume(request):
-    return render(request, 'portfolio_app/resume.html')
+    profile = PageProfile.objects.get(name="Lucas Caldas")
+    context= {'profile':profile}
+    return render(request, 'portfolio_app/resume.html', context)
 
-@login_required(login_url="../user/login")
 def contact(request):
-    return render(request, 'portfolio_app/contact.html')
+    profile = PageProfile.objects.get(name="Lucas Caldas")
+    context= {'profile':profile}
+    return render(request, 'portfolio_app/contact.html', context)
 
 #CRUD VIEWS
 ### POST
 login_required(login_url="../user/login")
 def createPost(request):
     form = postForm()
-
+    profile = PageProfile.objects.get(name="Lucas Caldas")
     if request.method == 'POST':
         form = postForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
         return redirect('projects')
 
-    context = {'form':form}
+    context = {'form':form, 'profile':profile}
     return render(request, 'portfolio_app/post_form.html', context)
 
 ### UPDATE
@@ -72,14 +76,14 @@ login_required(login_url="../user/login")
 def updatePost(request, pk):
     post = Post.objects.get(id=pk)
     form = postForm(instance=post)
-
+    profile = PageProfile.objects.get(name="Lucas Caldas")
     if request.method == 'POST':
         form = postForm(request.POST, request.FILES, instance = post)
         if form.is_valid():
             form.save()
         return redirect('projects')
 
-    context = {'form':form}
+    context = {'form':form, 'profile':profile}
     return render(request, 'portfolio_app/post_form.html', context)
 
 ### DELETE

@@ -3,12 +3,22 @@
         {% csrf_token %}
         <a name="contact"></a>
         <div class="row">
-            <input type="text" class="input-field" name="name" placeholder="Name">   
-            <input type="email" class="input-field" name="email" placeholder="Email">
-        </div>
-        <hr>
-        <input type="text" class="input-field" name="subject" placeholder="Subject">
-        <textarea name="message" class="input-field" rows="7" placeholder="Enter your Message"></textarea>
-        <input id="submit-btn" type="submit" value="Send" class="btn">
+            <div class="col-12 col-md-6">
+                <input type="text" class="input-field" name="name" placeholder="Name">   
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="email" class="input-field" name="email" placeholder="Email">
+            </div>
+            <hr>
+            <div class="col-12">
+                <input type="text" class="input-field" name="subject" placeholder="Subject">
+            </div>
+            <div class="col-12">
+                <textarea name="message" class="input-field" rows="7" placeholder="Enter your Message"></textarea>
+            </div>
+            <div class="col-12">
+                <input id="submit-btn" type="submit" value="Send" class="btn">   
+            </div>
+        </div>         
     </form>
 </div>

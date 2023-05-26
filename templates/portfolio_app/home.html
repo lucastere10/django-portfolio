@@ -1,12 +1,13 @@
 {% extends '../shared/base.html' %}
 {% load static %}
 {% block content %}
+{% include '../partials/_navbar.html' %}
 <!-- content goes here -->
 <section class="profile-section body-section">
     <div class="profile-upper upper-container">
         <div class="grid-container">
-            <h2 class="profile-name main-title">Lucas Caldas</h2>
-            <h3 class="profile-name-subheader subtitle">Aspiring Engineer</h3>
+            <h2 class="profile-name main-title">{{profile.name}}</h2>
+            <h3 class="profile-name-subheader subtitle">{{profile.subtitle}}</h3>
             <p class="profile-desc subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, recusandae! 
                 Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
                 numquam aliquid eveniet. Similique quo at inventore provident dolor.</p>
@@ -15,7 +16,7 @@
                 <a href="{% url 'projects' %}" class="profile-view-portfolio__button btn">View Portfolio</a>
             </div>
             <div class="profile-img">
-                <img class="home-img" src="{{user.profile.thumbnail.url}}" alt="">
+                <img class="home-img" src="{{profile.home_img.url}}" alt="">
             </div>
         </div>
     </div>
@@ -27,9 +28,7 @@
                 <a href="#" class="edit-anchor">Edit</a>
                 {% endif %}
             </div>
-            <p class="text-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, recusandae! 
-                Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
-                numquam aliquid eveniet. Similique quo at inventore provident dolor.</p>
+            {{profile.home_skills}}
         </div>
         <div class="profile-container">
             <div class="profile-row">
