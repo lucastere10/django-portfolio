@@ -8,9 +8,9 @@
         <div class="grid-container">
             <h2 class="profile-name main-title">{{profile.name}}</h2>
             <h3 class="profile-name-subheader subtitle">{{profile.subtitle}}</h3>
-            <p class="profile-desc subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, recusandae! 
-                Amet, illum facere, deserunt esse animi cum quis doloremque odit voluptatum 
-                numquam aliquid eveniet. Similique quo at inventore provident dolor.</p>
+            <p class="profile-desc subtitle">I'm an aspiring production engineer with interests in Data Science and Machine Learning Algorithms. 
+                Here I write about my personal projects in development. Want to know how I may help your project? 
+                Check out my project portfolio and online resume.</p>
             <div class="buttons-container">
                 <a href="{% url 'contact' %}" class="profile-hireme__button btn">Hire Me</a>
                 <a href="{% url 'projects' %}" class="profile-view-portfolio__button btn">View Portfolio</a>
@@ -28,7 +28,7 @@
                 <a href="#" class="edit-anchor">Edit</a>
                 {% endif %}
             </div>
-            {{profile.home_skills}}
+            <div class="p">{{profile.home_skills | safe}}</div>
         </div>
         <div class="profile-container">
             <div class="profile-row">

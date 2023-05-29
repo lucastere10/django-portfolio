@@ -3,11 +3,38 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        .upper-grid{
+            width: auto;
+            .account-name{
+                font-size: 2rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+            .account-heading{
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+                margin-top: .5rem;
+            }
+            .account-secondary{
+                font-size: 1rem;
+                letter-spacing: 2px;
+                font-weight: 500;
+                margin: 1rem 0 .5rem 0;
+            }
+        }
         .edit-grid{
             background: var(--clr-background);
             border-radius: 5px;
             padding: 1rem 2rem;
-            box-shadow: 1px 1px 6px 0px;  
+            box-shadow: 1px 1px 6px 0px; 
+            legend {
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                font-weight: 700;
+                margin-top: .75rem;
+            }
             label{
                 font-family: $font-type;
                 font-size: 1.1rem
@@ -24,6 +51,11 @@
             .edit-title{
                 font-size: 1.3rem;
                 font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            input {
+                margin-top: 6px;
+                margin-bottom: 0;
             }
         }
         

@@ -29,7 +29,8 @@ border: solid 2px var(--clr-tertiary);
 }
 
 /* TEXT INPUT */
-input[type=text], input[type=email], input[type=password], select, textarea {
+input[type=text], input[type=email], input[type=password], 
+input[type=number], input[type=url], select, textarea, #id_gender {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;

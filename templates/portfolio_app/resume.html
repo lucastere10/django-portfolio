@@ -18,24 +18,24 @@
                 <div class="resume-contacts col-12 col-md-4">
                     <p class="resume-socials"><i class="bi bi-phone"></i> {{profile.phone}}</p>
                     <p class="resume-socials"><i class="bi bi-envelope"></i> <a href="{{user.email}}" class="">{{user.email}}</a></p>
-                    <p class="resume-socials"><i class="bi bi-instagram"></i> <a href="{{profile.insta}}" class="">instagram</a></p>
+                    <p class="resume-socials"><i class="bi bi-instagram"></i> <a href="{{profile.insta}}" class="">Instagram</a></p>
                     <p class="resume-socials"><i class="bi bi-map"></i> {{profile.adress}}</p>
                 </div>
             </div>
             <hr>
             <div class="resume-mid-row row">
                 <img class="col-md-4" src="{{profile.profile_img.url}}" alt="">
-                <h3 class="col-md-8">{{profile.summary}}</h3>
+                <h3 class="col-md-8">{{profile.summary | safe}}</h3>
             </div>
             <hr>
             <div class="resume-lower-row row">
                 <h3 class="topic-title">SKILLS</h3>
-                <p>{{profile.skills}}</p>
+                <p>{{profile.skills | safe}}</p>
                 <h3 class="topic-title">EDUCATION</h3>
-                <p>{{profile.education}}</p>
+                <p>{{profile.education | safe}}</p>
                 <h3 class="topic-title">PROJECTS</h3>
                 <h3 class="topic-title">LANGUAGES</h3>
-                <p>{{profile.languages}}</p>
+                <p>{{profile.languages | safe}}</p>
             </div>
         </div>
     </div>

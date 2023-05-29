@@ -2,13 +2,8 @@ from django.shortcuts import render, redirect
 from . forms import UserRegistrationForm, UserUpdateForm, ProfileUpdateForm, SocialsUpdateForm, HomeUpdateForm, ResumeUpdateForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from . models import PageProfile
 # Create your views here.
-
-'''def login(request):
-    return render(request, 'user_app/login.html')
-
-def register(request):
-    return render(request, 'user_app/register.html')'''
 
 def registration(request):
     if request.method == 'POST':
@@ -21,14 +16,15 @@ def registration(request):
         form = UserRegistrationForm()
     return render(request, 'registration/register.html', {'form':form})
 
-'''def profile(request):
+def profile(request):
+    profile = PageProfile.objects.get(name="Lucas Caldas")
 
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-        s_form = SocialsUpdateForm(request.POST, instance=request.user.profile)
-        h_form = HomeUpdateForm(request.POST, request.FILES, instance=request.user.profile)
-        r_form = ResumeUpdateForm(request.POST, instance=request.user.profile)
+        p_form = ProfileUpdateForm(request.POST, request.FILES)
+        s_form = SocialsUpdateForm(request.POST)
+        h_form = HomeUpdateForm(request.POST, request.FILES)
+        r_form = ResumeUpdateForm(request.POST)
         if u_form.is_valid() and p_form.is_valid() and s_form.is_valid() and h_form.is_valid() and r_form.is_valid():
             u_form.save()
             p_form.save()
@@ -38,12 +34,13 @@ def registration(request):
             return redirect('/home')
     else:
         u_form = UserUpdateForm(instance=request.user)
-        p_form = ProfileUpdateForm(instance=request.user.profile)
-        s_form = SocialsUpdateForm(instance=request.user.profile)
-        h_form = HomeUpdateForm(instance=request.user.profile)
-        r_form = ResumeUpdateForm(instance=request.user.profile)
+        p_form = ProfileUpdateForm()
+        s_form = SocialsUpdateForm()
+        h_form = HomeUpdateForm()
+        r_form = ResumeUpdateForm()
 
     context = {
+        'profile':profile,
         'u_form':u_form,
         'p_form':p_form,
         's_form':s_form,
@@ -51,4 +48,4 @@ def registration(request):
         'r_form':r_form,
     }
 
-    return render(request, 'registration/edit_profile.html', context)'''
+    return render(request, 'registration/edit_profile.html', context)

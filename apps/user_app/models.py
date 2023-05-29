@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 
@@ -16,7 +17,7 @@ class PageProfile(models.Model):
     profile_img = models.ImageField(default = 'default/UserProfile.png', upload_to ='users/thumb', null=True, blank=True,)
     #contact info
     adress =  models.CharField(max_length = 200, null = True)
-    phone =  models.IntegerField(null = True)
+    phone =  PhoneNumberField(blank = True, null = True)
     #socials
     insta = models.URLField(max_length = 200, null = True)
     git = models.URLField(max_length = 200, null = True)

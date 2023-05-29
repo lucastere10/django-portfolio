@@ -10,5 +10,5 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path("register/", views.registration, name = 'register'),
-    #path("edit_profile/", views.profile, name = 'edit_profile')
+    path("edit_profile/", views.profile, name = 'edit_profile')
 ]

@@ -60,9 +60,13 @@
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
+                                {% if user.is_superuser %}                      
                                 <a href="/admin" class="config-anchors">Admin</a>
+                                {% endif %}
                                 <a href="{% url 'create_post' %}" class="config-anchors">Create Post</a>
-                                <a href="#"  class="config-anchors">Edit Profile</a>
+                                {% if user.is_superuser %}                      
+                                <a href="{% url 'edit_profile' %}"  class="config-anchors">Edit Profile</a>
+                                {% endif %}
                                 <a href="/user/logout" class="config-anchors">Logout</a>
                             </div>
                         </div>
