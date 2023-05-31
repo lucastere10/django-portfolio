@@ -252,7 +252,7 @@ input[type=number]:active, input[type=url]:hover, input[type=url]:active, select
      object-fit: cover; /* making sure the image isn't distorted */
 }
 .navbar .navbar-desc {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .navbar * {
   padding: 0.2rem;
