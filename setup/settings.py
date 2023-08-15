@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'bootstrap5',
     'phonenumber_field',
-    'django_phonenumbers',
+    #'django_phonenumbers',
     'crispy_forms',
     'crispy_bootstrap5',
     'django_filters',
